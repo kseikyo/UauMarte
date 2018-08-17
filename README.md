@@ -1,15 +1,14 @@
 # UauMarte
 
 # Padrões do código
- função:   f_NomeDaVariavel
- </br>
- inteiro:  i_NomeDaVariavel
- float:   fl_NomeDaVariavel
- boolean:  b_NomeDaVariavel
- double:   d_NomeDaVariavel
- char:     c_NomeDaVariavel
- string:   s_NomeDaVariavel
- long:     l_NomeDaVariavel
+ função:   f_NomeDaVariavel</br>
+ inteiro:  i_NomeDaVariavel</br>
+ float:   fl_NomeDaVariavel</br>
+ boolean:  b_NomeDaVariavel</br>
+ double:   d_NomeDaVariavel</br>
+ char:     c_NomeDaVariavel</br>
+ string:   s_NomeDaVariavel</br>
+ long:     l_NomeDaVariavel</br>
 # To Be Continued...
 
 
