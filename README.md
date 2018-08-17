@@ -11,7 +11,12 @@
  long:     l_NomeDaVariavel</br>
 # To Be Continued...
 ```java
-system.out.println("");
+public class Main(){
+    public static main void(String args[]) {
+        system.out.println("Hello World");
+    }
+}
+
 ```
 
 
