@@ -1,7 +1,7 @@
 # UauMarte
 
 # Padrões do código
- função:   f_NomeDaVariavel
+ função:   f_NomeDaVariavel;
  inteiro:  i_NomeDaVariavel
  float:   fl_NomeDaVariavel
  boolean:  b_NomeDaVariavel
