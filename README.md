@@ -10,7 +10,9 @@
  string:   s_NomeDaVariavel</br>
  long:     l_NomeDaVariavel</br>
 # To Be Continued...
-
+```java
+system.out.println("");
+```
 
 
 
