@@ -10,16 +10,6 @@
  string:   s_NomeDaVariavel</br>
  long:     l_NomeDaVariavel</br>
 # To Be Continued...
-```java
-public class Main(){
-    public static main void(String args[]) {
-        system.out.println("Hello World");
-    }
-}
-
-```
-
-
 
 
 
