@@ -1,51 +1,45 @@
 package ConexaoBanco;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.scene.control.Label;
 
 public class Conexao {
-    private Connection conn = null;
-    private String url = "jdbc:postgresql://localhost:5432/UauMarte";
-    private String user = "postgres";
-    private String password = "uaumarte";
-    
-    public Connection f_GetConnection(String user, String password, Label l) throws IOException, ClassNotFoundException, SQLException {
 
-        Class.forName("org.postgresql.Driver");
+    private static String usuario = "postgres";
+    private static String senha = "uaumarte";
+    private static String banco = "uaumarte";
+    private static String host = "localhost:5432";
+    private static String driver = "org.postgresql.Driver";
+    private static Connection conexao = null;
+    
+    public Conexao() {
         
+    }
+
+    public static Connection getConnection() {
         try {
-            
-            conn = DriverManager.getConnection(url, this.user, this.password);
-            /*Statement stmt = conn.createStatement();
-            ResultSet rs;
-            rs = stmt.executeQuery("SELECT \"Usuario\", \"Senha\", \"idCliente\" FROM public.\"Cliente\";");
-            while(rs.next()) {
-                if(rs.getString("\"Usuario\"").equals(user) && rs.getString("\"Senha\" ").equals(password)) {
-                    l.setText("Login feito com sucesso!");
-                    break;
-                }
-            }*/
-            l.setText("Login feito com sucesso!");
-            return conn;
-        }catch(SQLException ex){
-            Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null,ex);
-            l.setText("Não foi possível fazer o login.");
+            Class.forName(driver);
+            if (conexao == null || conexao.isClosed()) {
+                conexao = DriverManager.getConnection("jdbc:postgresql://" + host + "/" + banco, usuario, senha);
+            }
+        } catch (ClassNotFoundException e) {
+            System.out.println("Driver não encontrado!");
+        } catch (SQLException e) {
+            System.out.println("Erro de SQL!");
+            System.out.println(e.getMessage());
         }
-        
-        return conn;
+
+        return conexao;
     }
     
-    public void f_CloseConnection(Connection con) throws SQLException {
-        con.close();
+    public static void fecharConexao() {
+        try {
+            if(conexao!=null && !conexao.isClosed()) {
+                conexao.close();
+            }
+        }catch(SQLException e) {
+            
+        }
     }
-    
 }
