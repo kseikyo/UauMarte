@@ -14,7 +14,7 @@ import javafx.scene.control.Label;
 public class PessoaDAO {
     
     public static void pesquisarPessoa(String login, String senha, Label loginResult) {
-        int count = 0;
+
         Connection conn;
         conn = Conexao.getConnection();
         String sql = "";
@@ -23,7 +23,7 @@ public class PessoaDAO {
         sql += "'" +login + "'";
         sql += " AND senha = ";
         sql += "'" +senha+ "'";
-        
+
         System.out.println(sql);
         
         try {
