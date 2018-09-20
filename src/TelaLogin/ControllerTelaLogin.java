@@ -1,10 +1,13 @@
 package TelaLogin;
 
+import TelaCadastroCliente.ControllerTelaCadastroCliente;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -20,19 +23,23 @@ import ControllerClass.ControllerStart;
 //import javafx.scene.Node;
 //import javafx.scene.Parent;
 //import javafx.scene.Scene;
+import javafx.scene.control.Tab;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 //import javafx.stage.Stage;
 
 /*
  * @author Lucas
  */
-public class ControllerTelaLogin implements Initializable {
+public class ControllerTelaLogin extends Application implements Initializable {
     
     @FXML
     private AnchorPane LoginPane;
     
     @FXML
     private Button SignUpB;
+
+    private Tab tab;
 
     @FXML
     private Label loginResult;
@@ -46,10 +53,18 @@ public class ControllerTelaLogin implements Initializable {
     @FXML
     private JFXPasswordField password;
 
+    private ControllerStart controllerStart = new ControllerStart();
+
     public ControllerTelaLogin() {
         
     }
-    
+
+    @Override
+    public void start(Stage stage) {
+        try {
+            this.controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml", "Uau!Marte", this.controllerStart.getStage());
+        } catch(IOException e) { }
+    }
     
     @FXML
     void f_SignUpButtonClick(ActionEvent event) throws IOException {
@@ -58,24 +73,24 @@ public class ControllerTelaLogin implements Initializable {
         AnchorPane pane = loader.load();
         this.LoginPane.getChildren().setAll(pane);
         */
-        ControllerStart controllerStart = new ControllerStart();
-        controllerStart.initScreen("/FXMLFILES/TelaCadastro.fxml","Cadastre-se", controllerStart.getStage());
+        ControllerTelaCadastroCliente controllerTelaCadastroCliente = new ControllerTelaCadastroCliente();
+        controllerTelaCadastroCliente.start(this.controllerStart.getStage());
         
     }
 
     
     @FXML
-    private void checkLogin(ActionEvent event) throws IOException, ClassNotFoundException, SQLException  {
+    private void checkLogin(ActionEvent event) throws IOException  {
         if(f_CheckEmpty(this.loginResult)) {
             PessoaDAO.pesquisarPessoa(this.username.getText(), this.password.getText(), this.loginResult);
         }
     }
     
-    @FXML
+    /*@FXML
     private void clearFields(ActionEvent event) {
         this.username.setText("");
         this.password.setText("");
-    }
+    }*/
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import ControllerClass.ControllerStart;
+import TelaPrincipal.ControllerTelaPrincipal;
 import javafx.scene.control.Label;
 import ConexaoBanco.Conexao;
 
@@ -34,8 +35,10 @@ public class PessoaDAO {
             resultado.next();
             System.out.println(resultado.getString("login"));
             System.out.println(resultado.getString("senha"));
+            ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
             ControllerStart controllerStart = new ControllerStart();
-            controllerStart.initScreen("/FXMLFILES/TelaInicial.fxml","Tela inicial", controllerStart.getStage());
+            controllerTelaPrincipal.start(controllerStart.getStage());
+
         }catch (SQLException e) {
             loginResult.setText("Usuário não encontrado!");
         }

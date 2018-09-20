@@ -8,6 +8,8 @@ import com.jfoenix.validation.RequiredFieldValidator;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -22,7 +24,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import TelaLogin.ControllerTelaLogin;
 
-public class ControllerTelaCadastroCliente implements Initializable {
+public class ControllerTelaCadastroCliente extends Application implements Initializable {
 
     @FXML
     private ImageView img_ProfilePic;
@@ -68,6 +70,14 @@ public class ControllerTelaCadastroCliente implements Initializable {
 
     @FXML
     private JFXButton bt_CancelarCadastro;
+
+    private ControllerStart controllerStart = new ControllerStart();
+
+    public void start(Stage stage) {
+        try {
+            controllerStart.initScreen("/FXMLFILES/TelaCadastro.fxml","Cadastre-se", controllerStart.getStage());
+        } catch(IOException e) { }
+    }
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -175,8 +185,9 @@ public class ControllerTelaCadastroCliente implements Initializable {
         stage.setTitle("Uau!Marte");
         stage.show();
         */
-        ControllerStart controllerStart = new ControllerStart();
-        controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml","Uau!Marte", controllerStart.getStage());
+        ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
+
+        controllerTelaLogin.start(this.controllerStart.getStage());
         
     }
 
