@@ -66,7 +66,7 @@ public class ControllerTelaLogin implements Initializable {
     
     @FXML
     private void checkLogin(ActionEvent event) throws IOException, ClassNotFoundException, SQLException  {
-        if(f_CheckEmpty()) {
+        if(f_CheckEmpty(this.loginResult)) {
             PessoaDAO.pesquisarPessoa(this.username.getText(), this.password.getText(), this.loginResult);
         }
     }
@@ -114,11 +114,13 @@ public class ControllerTelaLogin implements Initializable {
 
 
     
-    private boolean f_CheckEmpty() {
+    private boolean f_CheckEmpty(Label label) {
         String user = this.username.getText();
         String pass = this.password.getText();
-        
-        if(user.length() + pass.length() <= 1) {
+
+
+        if(user.isEmpty() || pass.isEmpty()) {
+            label.setText("Por favor, preencha os campos obrigatórios");
             return false;
         }
         return true;

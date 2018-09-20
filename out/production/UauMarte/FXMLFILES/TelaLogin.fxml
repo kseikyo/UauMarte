@@ -7,41 +7,18 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<<<<<<< HEAD
 
 <AnchorPane fx:id="LoginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="768.0" minWidth="1366.0" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaLogin.ControllerTelaLogin">
    <children>
       <ImageView fitHeight="319.0" fitWidth="405.0" layoutX="546.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-=======
-<?import javafx.scene.text.Font?>
-
-<AnchorPane fx:id="LoginPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="1.7976931348623157E308" minWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="1206.0" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uaumarte.v1.ControllerTelaLogin">
-   <children>
-      <Label layoutX="542.0" layoutY="33.0" text="Novo por aqui ?" />
-      <Label layoutX="181.0" layoutY="190.0" text="Login" textFill="#838383" />
-      <Label layoutX="179.0" layoutY="245.0" text="Senha" textFill="#838383" />
-      <ImageView fitHeight="188.0" fitWidth="195.0" layoutX="238.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
->>>>>>> 4ee90a8db3a6354cbc58e0377976359347185596
          <image>
             <Image url="@LOGO_TRANSPARENTE.png" />
          </image>
       </ImageView>
-<<<<<<< HEAD
       <JFXTextField fx:id="username" focusColor="#b6ed6d" labelFloat="true" layoutX="557.0" layoutY="375.0" prefHeight="23.0" prefWidth="205.0" promptText="Digite seu login" styleClass="JFXTextField" stylesheets="@../style/style.css" />
       <JFXPasswordField fx:id="password" focusColor="#b6ed6d" labelFloat="true" layoutX="557.0" layoutY="428.0" prefHeight="23.0" prefWidth="205.0" promptText="Digite sua senha" styleClass="JFXPasswordField" stylesheets="@../style/style.css" />
-      <Label fx:id="loginResult" layoutX="809.0" layoutY="407.0" prefHeight="15.0" prefWidth="177.0" />
+      <Label fx:id="loginResult" layoutX="808.0" layoutY="378.0" prefHeight="17.0" prefWidth="239.0" textFill="#fffdfd" />
       <JFXButton id="bt-login-cliente" fx:id="LoginButton" layoutX="683.0" layoutY="492.0" onAction="#checkLogin" prefHeight="32.0" prefWidth="79.0" ripplerFill="#4d4d4d" stylesheets="@../style/style.css" text="Entrar" />
       <JFXButton id="bt-cadastro-cliente" fx:id="SignUpB" layoutX="557.0" layoutY="496.0" onAction="#f_SignUpButtonClick" stylesheets="@../style/style.css" text="Cadastre-se" />
-=======
-      <JFXTextField fx:id="username" labelFloat="true" layoutX="233.0" layoutY="186.0" promptText="Digite seu login" />
-      <JFXPasswordField fx:id="password" layoutX="233.0" layoutY="241.0" promptText="Digite sua senha" />
-      <Label fx:id="loginResult" layoutX="414.0" layoutY="191.0" />
-      <JFXButton fx:id="SignUpB" layoutX="212.0" layoutY="284.0" onAction="#f_SignUpButtonClick" prefHeight="44.0" prefWidth="86.0" ripplerFill="BLACK" text="Cadastre-se" textFill="#b6ed6d" />
-      <JFXButton layoutX="314.0" layoutY="294.0" style="-fx-background-color: rgb(182,237,109);" text="Entrar">
-         <font>
-            <Font name="SansSerif Bold" size="12.0" />
-         </font>
-      </JFXButton>
->>>>>>> 4ee90a8db3a6354cbc58e0377976359347185596
    </children>
 </AnchorPane>
