@@ -1,5 +1,6 @@
 package uaumarte.v1;
 
+import CadastroProdutos.TelaCadastro;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +15,7 @@ public class TelaLogin extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        
+        TelaCadastro tc = new TelaCadastro();
         
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/FXMLFILES/TelaLogin.fxml"));
@@ -22,8 +23,10 @@ public class TelaLogin extends Application {
         
         Scene scene = new Scene(root);
         stage.setTitle("Uau!Marte");
+        stage.setMaximized(true);
+        stage.setResizable(false);
       //stage.getIcons().add(new Image("C:/Users/Lucas/Downloads/icon.png"));
-        stage.setScene(scene);
+        stage.setScene(tc.getScene());
         stage.show();
     }
 

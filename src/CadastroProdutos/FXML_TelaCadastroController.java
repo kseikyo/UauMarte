@@ -19,7 +19,11 @@ import java.util.logging.Logger;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -29,6 +33,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javax.swing.JFileChooser;
 
 
@@ -70,12 +75,22 @@ public class FXML_TelaCadastroController implements Initializable {
     private ImageView iv_imagem;
     @FXML
     private ChoiceBox cb_vendaPor;
-    /*
-    //O PROBLEMA È ESSE JFXTEXTFIELD
-    //DO JFOENIX
-    */
- //   @FXML
-   // private void 
+    
+    
+    @FXML
+    private void f_pesquisar(ActionEvent event) throws IOException{
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/FXMLFILES/FXML_PesquisaProdutos.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Uau!Marte");
+        stage.show();
+    }
+    
+    
     @FXML
     private void f_escolheImagem(ActionEvent e){
         /*VAI ROLAR N */      
@@ -163,7 +178,7 @@ public class FXML_TelaCadastroController implements Initializable {
     private PreparedStatement f_criarPreparedStatemant(){
 
         try {
-            PreparedStatement ps = Conexao.f_GetConnection().prepareStatement("INSERT INTO Produto (Descricao,Preco,VendaPor,Marca,Observacao,Imagem) VALUES (?,?,?,?,?,?)");
+            PreparedStatement ps = Conexao.getConnection().prepareStatement("INSERT INTO Produto (Descricao,Preco,VendaPor,Marca,Observacao,Imagem) VALUES (?,?,?,?,?,?)");
             ps.setString(1, tf_produto.getText());
             ps.setDouble(2, Double.parseDouble(tf_preco.getText()));
             ps.setString(3, cb_vendaPor.getValue().toString());
@@ -171,7 +186,7 @@ public class FXML_TelaCadastroController implements Initializable {
             ps.setString(5,ta_observacoes.getText() );
             ps.setString(6,urlImagem);
             return ps;
-        } catch (IOException | ClassNotFoundException | SQLException ex) {
+        } catch (SQLException ex) {
             Logger.getLogger(FXML_TelaCadastroController.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }

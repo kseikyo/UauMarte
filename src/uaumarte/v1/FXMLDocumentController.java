@@ -48,7 +48,7 @@ public class FXMLDocumentController implements Initializable {
     private void checkLogin(ActionEvent event) throws IOException, ClassNotFoundException, SQLException  {
         if(f_CheckEmpty()) {
             Conexao con = new Conexao();
-            con.f_GetConnection(this.username.getText(), this.password.getText(), this.loginResult);
+            con.getConnection(this.username.getText(), this.password.getText(), this.loginResult);
         }
     }
     
