@@ -8,7 +8,11 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<<<<<<< HEAD
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="768.0" minWidth="1366.0" prefHeight="462.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastroCliente.ControllerTelaCadastroCliente">
+=======
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.7976931348623157E308" minWidth="-1.7976931348623157E308" prefHeight="462.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastro.ControllerTelaCadastro">
+>>>>>>> 4ee90a8db3a6354cbc58e0377976359347185596
    <children>
       <SplitPane orientation="VERTICAL" prefHeight="154.0" prefWidth="651.0">
         <items>

@@ -1,5 +1,6 @@
 package uaumarte.v1;
 
+import ConexaoBanco.PessoaDAO;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
@@ -46,10 +47,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void checkLogin(ActionEvent event) throws IOException, ClassNotFoundException, SQLException  {
-        if(f_CheckEmpty()) {
-            Conexao con = new Conexao();
-            con.f_GetConnection(this.username.getText(), this.password.getText(), this.loginResult);
-        }
+        PessoaDAO.pesquisarPessoa(this.username.getText(), this.password.getText(), this.loginResult);
     }
     
     @FXML
