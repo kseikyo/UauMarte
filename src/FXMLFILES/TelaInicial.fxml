@@ -11,7 +11,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="CadastrarProdutos">
             <items>
-              <MenuItem mnemonicParsing="false" style="-fx-background-color: rgb(40,40,40);" text="Abrir" />
+              <MenuItem mnemonicParsing="false" onAction="#f_GoToCadastroP" style="-fx-background-color: rgb(40,40,40);" text="Abrir" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Voltar ao login">
