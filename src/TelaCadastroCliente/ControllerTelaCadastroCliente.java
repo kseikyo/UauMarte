@@ -1,6 +1,7 @@
 package TelaCadastroCliente;
 
 import ControllerClass.ControllerStart;
+import DAO.PessoaDAO;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -70,6 +71,9 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
 
     @FXML
     private JFXButton bt_CancelarCadastro;
+
+    @FXML
+    private JFXTextField tf_CadastroTelefone;
 
     private ControllerStart controllerStart = new ControllerStart();
 
@@ -168,7 +172,9 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
     
     @FXML
     void f_CadastrarCliente(ActionEvent event) {
-        
+        PessoaDAO.cadastrarPessoa(tf_CadastroNome.getText(), tf_CadastroCPF.getText(), tf_CadastroDataNasc.getText(),
+                tf_CadastroEmail.getText(), pf_CadastroSenha.getText(), tf_CadastroEndereco.getText(), tf_CadastroBairro.getText(),
+                tf_CadastroCidade.getText(), tf_CadastroTelefone.getText());
     }
 
     @FXML
