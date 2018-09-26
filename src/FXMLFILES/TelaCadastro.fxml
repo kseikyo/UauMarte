@@ -9,34 +9,35 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="768.0" minWidth="1366.0" style="-fx-background-color: rgb(40,40,40);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastroCliente.ControllerTelaCadastroCliente">
    <children>
-      <ImageView fx:id="img_ProfilePic" fitHeight="108.0" fitWidth="120.0" layoutX="432.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="94.0" layoutY="76.0" text="Nome" />
-      <Label layoutX="94.0" layoutY="120.0" text="CPF" />
-      <Label layoutX="23.0" layoutY="157.0" text="Data de Nascimento" />
-      <JFXTextField fx:id="tf_CadastroNome" layoutX="142.0" layoutY="72.0" prefHeight="25.0" prefWidth="190.0" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroCPF" layoutX="142.0" layoutY="116.0" prefHeight="25.0" prefWidth="108.0" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroDataNasc" layoutX="140.0" layoutY="160.0" prefHeight="25.0" prefWidth="81.0" styleClass="JFXTextField" />
-      <Label layoutX="78.0" layoutY="224.0" text="Email" />
-      <Label layoutX="76.0" layoutY="275.0" text="Senha" />
-      <Label layoutX="40.0" layoutY="324.0" text="Repetir senha" />
-      <JFXTextField fx:id="tf_CadastroEmail" layoutX="142.0" layoutY="220.0" prefHeight="25.0" prefWidth="260.0" styleClass="JFXTextField" />
-      <JFXPasswordField fx:id="pf_CadastroSenha" layoutX="142.0" layoutY="271.0" prefHeight="25.0" prefWidth="260.0" styleClass="JFXPasswordField" />
-      <JFXPasswordField fx:id="pf_CadastroReSenha" layoutX="142.0" layoutY="320.0" prefHeight="25.0" prefWidth="260.0" styleClass="JFXPasswordField" />
-      <Label layoutX="40.0" layoutY="372.0" text="Logradouro" />
-      <Label layoutX="39.0" layoutY="417.0" text="Bairro" />
-      <Label layoutX="39.0" layoutY="455.0" text="Cidade" />
-      <JFXTextField fx:id="tf_CadastroEndereco" layoutX="140.0" layoutY="368.0" prefHeight="25.0" prefWidth="292.0" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroBairro" layoutX="140.0" layoutY="413.0" prefHeight="25.0" prefWidth="120.0" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroCidade" layoutX="140.0" layoutY="451.0" prefHeight="25.0" prefWidth="120.0" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroCEP" layoutX="304.0" layoutY="413.0" prefHeight="25.0" prefWidth="127.0" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroNumCasa" layoutX="304.0" layoutY="451.0" prefHeight="25.0" prefWidth="47.0" styleClass="JFXTextField" />
-      <Label layoutX="272.0" layoutY="417.0" text="CEP" />
-      <Label layoutX="276.0" layoutY="455.0" text="N°" />
-      <Label layoutX="368.0" layoutY="455.0" text="UF" />
-      <JFXTextField fx:id="tf_CadastroUF" layoutX="394.0" layoutY="451.0" prefHeight="25.0" prefWidth="37.0" styleClass="JFXTextField" />
-      <JFXButton id="bt-cadastro-cliente" fx:id="bt_CadastrarCliente" layoutX="466.0" layoutY="451.0" onAction="#f_CadastrarCliente" text="Cadastrar" />
-      <JFXButton id="bt-login-cliente" fx:id="bt_CancelarCadastro" layoutX="552.0" layoutY="451.0" onAction="#f_GoToLogin" text="Sair" />
-      <JFXTextField fx:id="tf_CadastroTelefone" layoutX="140.0" layoutY="507.0" styleClass="JFXTextField" />
-      <Label layoutX="42.0" layoutY="511.0" text="Telefone" />
+      <ImageView fx:id="img_ProfilePic" fitHeight="108.0" fitWidth="120.0" layoutX="563.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="39.0" layoutY="75.0" text="Nome" />
+      <Label layoutX="39.0" layoutY="125.0" text="CPF" />
+      <Label layoutX="39.0" layoutY="175.0" text="Data de Nascimento" />
+      <JFXTextField fx:id="tf_CadastroNome" layoutX="160.0" layoutY="70.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXTextField" />
+      <JFXTextField fx:id="tf_CadastroCPF" layoutX="160.0" layoutY="120.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXTextField" />
+      <JFXTextField fx:id="tf_CadastroDataNasc" layoutX="160.0" layoutY="170.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXTextField" />
+      <Label layoutX="39.0" layoutY="225.0" text="Email" />
+      <Label layoutX="39.0" layoutY="275.0" text="Senha" />
+      <Label layoutX="39.0" layoutY="325.0" text="Repetir senha" />
+      <JFXTextField fx:id="tf_CadastroEmail" layoutX="160.0" layoutY="220.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXTextField" />
+      <JFXPasswordField fx:id="pf_CadastroSenha" layoutX="160.0" layoutY="270.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXPasswordField" />
+      <JFXPasswordField fx:id="pf_CadastroReSenha" layoutX="160.0" layoutY="320.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXPasswordField" />
+      <Label layoutX="39.0" layoutY="375.0" text="Logradouro" />
+      <Label layoutX="39.0" layoutY="475.0" text="Bairro" />
+      <Label layoutX="39.0" layoutY="525.0" text="Cidade" />
+      <JFXTextField fx:id="tf_CadastroEndereco" layoutX="160.0" layoutY="368.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXTextField" />
+      <JFXTextField fx:id="tf_Complemento" layoutX="160.0" layoutY="420.0" prefHeight="25.0" prefWidth="310.0" styleClass="JFXTextField" />
+      <JFXTextField fx:id="tf_CadastroBairro" layoutX="160.0" layoutY="470.0" prefHeight="25.0" prefWidth="120.0" styleClass="JFXTextField" />
+      <JFXTextField fx:id="tf_CadastroCidade" layoutX="160.0" layoutY="520.0" prefHeight="25.0" prefWidth="120.0" styleClass="JFXTextField" />
+      <JFXTextField fx:id="tf_CadastroCEP" layoutX="339.0" layoutY="470.0" prefHeight="25.0" prefWidth="129.0" styleClass="JFXTextField" />
+      <JFXTextField fx:id="tf_CadastroNumCasa" layoutX="339.0" layoutY="520.0" prefHeight="25.0" prefWidth="47.0" styleClass="JFXTextField" />
+      <Label layoutX="297.0" layoutY="481.0" text="CEP" />
+      <Label layoutX="297.0" layoutY="531.0" text="N°" />
+      <Label layoutX="396.0" layoutY="531.0" text="UF" />
+      <JFXTextField fx:id="tf_CadastroUF" layoutX="429.0" layoutY="520.0" prefHeight="25.0" prefWidth="37.0" styleClass="JFXTextField" />
+      <JFXButton id="bt-cadastro-cliente" fx:id="bt_CadastrarCliente" layoutX="343.0" layoutY="587.0" onAction="#f_CadastrarCliente" text="Cadastrar" />
+      <JFXButton id="bt-login-cliente" fx:id="bt_CancelarCadastro" layoutX="429.0" layoutY="587.0" onAction="#f_GoToLogin" text="Sair" />
+      <Label layoutX="39.0" layoutY="425.0" text="Complemento" />
+      <Label fx:id="lb_Email" layoutX="509.0" layoutY="224.0" />
    </children>
 </AnchorPane>
