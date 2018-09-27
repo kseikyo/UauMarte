@@ -96,14 +96,17 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
     @FXML
     private Label lb_CEP;
 
+    @FXML
+    private Label lb_Check;
+
     private ArrayList<String> UFs = new ArrayList<String>();
 
 
-    String padraocep   = "\\d{5}[-]\\d{3}";
+    String padraocep   = "^\\d{5}[-]\\d{3}$";
     String padraoEmail = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*"
                          + "@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    String padraocpf   = "\\d{3}[.]\\d{3}[.]\\d{3}[-]\\d{2}";
-    String padraoData  = "\\d{2}[/]\\d{2}[/]\\d{4}";
+    String padraocpf   = "^\\d{3}[.]\\d{3}[.]\\d{3}[-]\\d{2}$";
+    String padraoData  = "^\\d{2}[/]\\d{2}[/]\\d{4}$";
     String padraosenha = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$";
 
 
@@ -149,7 +152,14 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
                 if (!newValue) {
                     tf_CadastroCPF.validate();
                     try {
-                        PessoaDAO.pesquisarCPF(tf_CadastroCPF.getText());
+                        String aux = tf_CadastroCPF.getText();
+                        String cpf;
+                        cpf = aux.substring(0,3);
+                        cpf+= aux.substring(4,7);
+                        cpf+= aux.substring(8, 11);
+                        cpf+= aux.substring(12, 14);
+                        System.out.println(cpf);
+                        PessoaDAO.pesquisarCPF(cpf, lb_CPF);
                     } catch (IOException e) {
 
                     }
@@ -293,11 +303,12 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
                     });
                 }
                 if (newValue.length() == 11 && !newValue.matches(padraocpf)) {
-                    StringBuilder sb = new StringBuilder(newValue)
+                    /*StringBuilder sb = new StringBuilder(newValue)
                             .insert(3, ".")
                             .insert(7, ".")
-                            .insert(11, "-");
-                    tf_CadastroCPF.setText(sb.toString());
+                            .insert(11, "-");*/
+                    tf_CadastroCPF.setText(newValue.replaceAll("^(\\d{3})(\\d{3})(\\d{3})(\\d{2})$",
+                            "$1.$2.$3-$4"));
                 }
             }
         });
@@ -346,7 +357,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldvalue, Boolean newValue) {
                 if (!newValue) {
                     tf_CadastroCEP.validate();
-                    if(tf_CadastroCEP.getText().matches(padraocep)) lb_CEP.setText("Cep inválido");
+                    if(!tf_CadastroCEP.getText().matches(padraocep)) lb_CEP.setText("Cep inválido");
                     else lb_CEP.setText("");
                 }
             }
@@ -401,7 +412,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
                     int val = 0;
                     for( String uf: UFs) {
                         if(tf_CadastroUF.getText().equals(uf)) {
-                            lb_UF.setText("UF válida");
+
                             val++;
                             break;
                         }
@@ -426,9 +437,18 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
 
     @FXML
     void f_CadastrarCliente(ActionEvent event) {
-        PessoaDAO.cadastrarPessoa(tf_CadastroNome.getText(), tf_CadastroCPF.getText(), tf_CadastroDataNasc.getText(),
-                tf_CadastroEmail.getText(), pf_CadastroSenha.getText(), tf_CadastroEndereco.getText(), tf_CadastroBairro.getText(),
-                tf_CadastroCidade.getText());
+        if(checkCampos(tf_CadastroNome.getText(), tf_CadastroCPF.getText(), tf_CadastroDataNasc.getText(),
+                tf_CadastroEmail.getText(), pf_CadastroSenha.getText(),tf_CadastroCEP.getText(),
+                tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(),
+                tf_CadastroBairro.getText(), tf_CadastroCidade.getText(), tf_CadastroUF.getText())) {
+
+            PessoaDAO.cadastrarPessoa(tf_CadastroNome.getText(), tf_CadastroCPF.getText(), tf_CadastroDataNasc.getText(),
+                    tf_CadastroEmail.getText(), pf_CadastroSenha.getText(), tf_CadastroCEP.getText(),
+                    tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(), tf_Complemento.getText(),
+                    tf_CadastroBairro.getText(), tf_CadastroCidade.getText(), tf_CadastroUF.getText());
+        }else
+            lb_Check.setText("Preencha todos os campos obrigatórios");
+
     }
 
     @FXML
@@ -458,6 +478,17 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
         this.UFs.add("PE");this.UFs.add("PI");this.UFs.add("PR");this.UFs.add("RJ");this.UFs.add("RN");
         this.UFs.add("RO");this.UFs.add("RR");this.UFs.add("RS");this.UFs.add("SC");this.UFs.add("SE");
         this.UFs.add("SP");this.UFs.add("TO");
+    }
+
+    private boolean checkCampos(String nome, String cpf, String data, String login, String senha,String cep,
+                                String ender, String num_casa, String bairro, String cidade,
+                                String uf)
+    {
+        if(nome.isEmpty() || cpf.isEmpty() || data.isEmpty() || login.isEmpty() || senha.isEmpty() || cep.isEmpty()
+                || ender.isEmpty() || num_casa.isEmpty() || bairro.isEmpty() || cidade.isEmpty()
+                || uf.isEmpty()) return false;
+
+        return true;
     }
 
 }
