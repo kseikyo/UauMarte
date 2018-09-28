@@ -1,0 +1,29 @@
+.label {
+	-fx-font: 12px "sans-serif";
+	font-weight: bold;
+	-fx-text-fill: #aba5a5;
+}
+
+.JFXTextField {
+	-fx-font: 12px "sans-serif";
+	-fx-base: rgb(255,255,255);
+	-fx-text-fill: #aba5a5;
+	-fx-opacity: 1.0;
+}
+
+.JFXPasswordField {
+	-fx-font: 12px "sans-serif";
+	-fx-base: rgb(255,255,255);
+	-fx-text-fill: #aba5a5;
+	-fx-opacity: 1.0;
+}
+
+#bt-login-cliente {
+	-fx-text-fill: #b6ed6d;
+	-fx-background-color: rgb(70,70,70);
+}
+
+#bt-cadastro-cliente {
+	-fx-text-fill: #b6ed6d;
+	
+}

@@ -3,7 +3,6 @@ package ConexaoBanco;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javafx.scene.control.Label;
 
 public class Conexao {
 
@@ -42,9 +41,5 @@ public class Conexao {
         }catch(SQLException e) {
             
         }
-    }
-
-    public void getConnection(String text, String text0, Label loginResult) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
