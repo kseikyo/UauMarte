@@ -18,7 +18,10 @@ import ConexaoBanco.Conexao;
  */
 public class PessoaDAO {
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> Lucas
     public static void pesquisarPessoa(String email, String senha, Label loginResult) throws IOException {
         Connection conn;
         conn = Conexao.getConnection();
@@ -35,7 +38,10 @@ public class PessoaDAO {
             PreparedStatement comando = conn.prepareStatement(sql);
             ResultSet resultado = comando.executeQuery();
             resultado.next();
+<<<<<<< HEAD
 
+=======
+>>>>>>> Lucas
             System.out.println(resultado.getString("email"));
             System.out.println(resultado.getString("senha"));
             ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
