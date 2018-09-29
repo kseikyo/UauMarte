@@ -16,17 +16,17 @@
             <Image url="@../../../ImgImagem001.gif" />
          </image>
       </ImageView>
-      <Label alignment="CENTER_RIGHT" layoutX="202.0" layoutY="94.0" text="Código:" />
-      <Label alignment="CENTER_RIGHT" layoutX="200.0" layoutY="129.0" text="Produto:" />
-      <Label alignment="CENTER_RIGHT" layoutX="212.0" layoutY="166.0" text="Preço:" AnchorPane.leftAnchor="212.0" AnchorPane.topAnchor="166.0" />
-      <Label alignment="CENTER_RIGHT" layoutX="211.0" layoutY="204.0" text="Marca:" AnchorPane.leftAnchor="211.0" AnchorPane.topAnchor="204.0" />
-      <Label alignment="CENTER_RIGHT" layoutX="352.0" layoutY="166.0" text="Venda por:" AnchorPane.leftAnchor="352.0" AnchorPane.topAnchor="166.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="202.0" layoutY="94.0" style="-: gray;" text="Código:" textFill="#979797" />
+      <Label alignment="CENTER_RIGHT" layoutX="200.0" layoutY="129.0" text="Produto:" textFill="#979797" />
+      <Label alignment="CENTER_RIGHT" layoutX="212.0" layoutY="166.0" text="Preço:" textFill="#979797" AnchorPane.leftAnchor="212.0" AnchorPane.topAnchor="166.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="211.0" layoutY="204.0" text="Marca:" textFill="#979797" AnchorPane.leftAnchor="211.0" AnchorPane.topAnchor="204.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="352.0" layoutY="166.0" text="Venda por:" textFill="#979797" AnchorPane.leftAnchor="352.0" AnchorPane.topAnchor="166.0" />
       <TextField id="bt-login-cliente" fx:id="tf_codigo" layoutX="255.0" layoutY="90.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="90.0" />
       <TextField id="bt-login-cliente" fx:id="tf_produto" layoutX="255.0" layoutY="125.0" prefHeight="25.0" prefWidth="287.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="125.0" />
       <TextField id="bt-login-cliente" fx:id="tf_preco" layoutX="255.0" layoutY="162.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="162.0" />
       <TextField id="bt-login-cliente" fx:id="tf_marca" layoutX="255.0" layoutY="200.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="200.0" />
       <ChoiceBox id="bt-login-cliente" fx:id="cb_vendaPor" layoutX="412.0" layoutY="162.0" prefHeight="25.0" prefWidth="130.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="412.0" AnchorPane.topAnchor="162.0" />
-      <Label layoutX="26.0" layoutY="254.0" text="Observações:" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="26.0" />
+      <Label layoutX="26.0" layoutY="254.0" text="Observações:" textFill="#979797" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="26.0" />
       <TextArea fx:id="ta_observacoes" layoutX="26.0" layoutY="271.0" prefHeight="100.0" prefWidth="553.0" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" />
       <TextField id="bt-login-cliente" fx:id="tf_pesquisar" layoutX="352.0" layoutY="37.0" stylesheets="@../style/style.css" AnchorPane.rightAnchor="102.0" AnchorPane.topAnchor="37.0" />
       <Button id="bt-login-cliente" fx:id="bt_pesquisar" layoutX="522.0" layoutY="37.0" mnemonicParsing="false" onAction="#f_pesquisar" stylesheets="@../style/style.css" text="Pesquisar" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="37.0" />
