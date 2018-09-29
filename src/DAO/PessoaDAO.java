@@ -11,6 +11,7 @@ import ControllerClass.ControllerStart;
 import TelaPrincipal.ControllerTelaPrincipal;
 import javafx.scene.control.Label;
 import ConexaoBanco.Conexao;
+import org.postgresql.util.PSQLException;
 
 /**
  *
@@ -19,8 +20,15 @@ import ConexaoBanco.Conexao;
 public class PessoaDAO {
     
     public static void pesquisarPessoa(String email, String senha, Label loginResult) throws IOException {
-        Connection conn;
-        conn = Conexao.getConnection();
+        Connection conn = null;
+        try {
+            conn = Conexao.getConnection();
+        }catch(Exception e) {
+            e.printStackTrace();
+            e.getCause();
+            e.getMessage();
+            e.getLocalizedMessage();
+        }
         String sql = "";
         sql += "SELECT email, senha FROM public.usuario_do_sistema";
         sql += " WHERE email = ";

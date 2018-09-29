@@ -39,7 +39,6 @@ public class ControllerTelaLogin extends Application implements Initializable {
     @FXML
     private Button SignUpB;
 
-    private Tab tab;
 
     @FXML
     private Label loginResult;
