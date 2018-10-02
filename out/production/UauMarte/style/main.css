@@ -1,0 +1,18 @@
+.menu .label{     
+	-fx-text-fill: #b6ed6d;
+}
+
+.menu-item:focused {
+     -fx-background-color: rgb(40,40,40);
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: rgb(40,40,40);
+    -fx-background-insets: 0, 1, 2;
+    
+}
+
+#menu {
+	-fx-background-color: rgb(40,40,40);
+}

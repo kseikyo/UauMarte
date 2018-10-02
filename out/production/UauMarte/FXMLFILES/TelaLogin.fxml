@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="LoginPane" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaLogin.ControllerTelaLogin">
+   <children>
+      <ImageView fitHeight="319.0" fitWidth="405.0" layoutX="546.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LOGO_TRANSPARENTE.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="username" focusColor="#b6ed6d" labelFloat="true" layoutX="557.0" layoutY="375.0" prefHeight="23.0" prefWidth="205.0" promptText="Digite seu login" styleClass="JFXTextField" stylesheets="@../style/style.css" />
+      <JFXPasswordField fx:id="password" focusColor="#b6ed6d" labelFloat="true" layoutX="557.0" layoutY="428.0" prefHeight="23.0" prefWidth="205.0" promptText="Digite sua senha" styleClass="JFXPasswordField" stylesheets="@../style/style.css" />
+      <Label fx:id="loginResult" layoutX="808.0" layoutY="378.0" prefHeight="17.0" prefWidth="239.0" textFill="#fffdfd" />
+      <JFXButton id="bt-login-cliente" fx:id="LoginButton" layoutX="683.0" layoutY="492.0" onAction="#checkLogin" prefHeight="32.0" prefWidth="79.0" ripplerFill="#4d4d4d" stylesheets="@../style/style.css" text="Entrar" />
+      <JFXButton id="bt-cadastro-cliente" fx:id="SignUpB" layoutX="557.0" layoutY="496.0" onAction="#f_SignUpButtonClick" stylesheets="@../style/style.css" text="Cadastre-se" />
+   </children>
+</AnchorPane>
