@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/CadastroProdutos/FXML_PesquisaProdutosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/CadastroProdutos/FXML_PesquisaProdutosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/CadastroProdutos/FXML_TelaCadastroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/CadastroProdutos/FXML_TelaCadastroController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/CadastroProdutos/TelaCadastro.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/CadastroProdutos/TelaCadastro.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/ConexaoBanco/Conexao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/ConexaoBanco/Conexao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/DAO/PessoaDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/DAO/PessoaDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/FXMLFILES/FXML_PesquisaProdutos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/FXMLFILES/FXML_PesquisaProdutos.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/FXMLFILES/FXML_TelaCadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/FXMLFILES/FXML_TelaCadastro.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/FXMLFILES/TelaCadastro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/FXMLFILES/TelaCadastro.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UauMarte/TelaCadastroCliente/ControllerTelaCadastroCliente.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConexaoBanco/Conexao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConexaoBanco/Conexao.java" afterDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -112,33 +92,45 @@
     <session id="-1802173472">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.43" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.46" value="1" />
+          <entry key="project.open.time.66" value="1" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="fxml" value="5" />
-          <entry key="java" value="9" />
+          <entry key="class" value="9" />
+          <entry key="fxml" value="6" />
+          <entry key="java" value="32" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
-          <entry key="XML" value="5" />
+          <entry key="CLASS" value="9" />
+          <entry key="JAVA" value="32" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="fxml" value="25" />
-          <entry key="java" value="2064" />
+          <entry key="fxml" value="46" />
+          <entry key="java" value="10645" />
+          <entry key="regexp" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2064" />
-          <entry key="XML" value="25" />
+          <entry key="JAVA" value="10645" />
+          <entry key="RegExp" value="2" />
+          <entry key="XML" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -209,29 +201,50 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1042207196">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CadastroProdutos/TelaCadastro.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TelaCadastroCliente/ControllerTelaCadastroCliente.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="-410">
-              <caret line="280" column="78" lean-forward="true" selection-start-line="280" selection-start-column="78" selection-end-line="280" selection-end-column="78" />
+            <state relative-caret-position="17">
+              <caret line="280" column="17" selection-start-line="280" selection-start-column="17" selection-end-line="280" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2155#2163#0" expanded="true" />
                 <element signature="method#f_CadastrarCliente#0;class#ControllerTelaCadastroCliente#0" />
                 <element signature="method#f_GoToLogin#0;class#ControllerTelaCadastroCliente#0" />
                 <element signature="method#addUFS#0;class#ControllerTelaCadastroCliente#0" />
               </folding>
-=======
-            <state relative-caret-position="119">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
->>>>>>> Arthur
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TelaLogin/ControllerTelaLogin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="83" column="106" selection-start-line="83" selection-start-column="106" selection-end-line="83" selection-end-column="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CadastroProdutos/FXML_TelaCadastroController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1598">
+              <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -239,40 +252,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DAO/PessoaDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="235">
-              <caret line="83" column="106" lean-forward="true" selection-start-line="83" selection-start-column="106" selection-end-line="83" selection-end-column="106" />
-=======
-            <state relative-caret-position="1411">
-              <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
->>>>>>> Arthur
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FXMLFILES/FXML_PesquisaProdutos.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="255">
-              <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-=======
-            <state relative-caret-position="102">
-              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
->>>>>>> Arthur
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TelaCadastroCliente/ControllerTelaCadastroCliente.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="206">
+            <state relative-caret-position="663">
               <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
             </state>
           </provider>
@@ -281,32 +261,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ConexaoBanco/Conexao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-=======
-            <state relative-caret-position="68">
-              <caret line="108" column="71" lean-forward="true" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initialize#0;class#ControllerTelaCadastroCliente#0" />
-              </folding>
->>>>>>> Arthur
+            <state relative-caret-position="425">
+              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ConexaoBanco/Conexao.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="272">
-              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-=======
-            <state relative-caret-position="166">
-              <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
->>>>>>> Arthur
+            <state relative-caret-position="255">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FXMLFILES/TelaCadastro.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -321,6 +298,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>a</find>
+      <find>padrao</find>
+      <find>bairro</find>
+      <find>char[]</find>
+      <find>char</find>
     </findStrings>
     <replaceStrings>
       <replace>a</replace>
@@ -339,20 +320,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/FXMLFILES/TelaInicial.fxml" />
+        <option value="$PROJECT_DIR$/src/ConexaoBanco/Conexao.java" />
         <option value="$PROJECT_DIR$/src/Objetos/Pessoa.java" />
         <option value="$PROJECT_DIR$/src/CadastroProdutos/TelaCadastro.java" />
         <option value="$PROJECT_DIR$/src/TelaPrincipal/ControllerTelaPrincipal.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/FXMLFILES/TelaCadastro.fxml" />
         <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/src/CadastroProdutos/FXML_TelaCadastroController.java" />
         <option value="$PROJECT_DIR$/src/TelaLogin/ControllerTelaLogin.java" />
         <option value="$PROJECT_DIR$/src/DAO/PessoaDAO.java" />
-=======
->>>>>>> Arthur
         <option value="$PROJECT_DIR$/src/TelaCadastroCliente/ControllerTelaCadastroCliente.java" />
-        <option value="$PROJECT_DIR$/src/DAO/PessoaDAO.java" />
-        <option value="$PROJECT_DIR$/src/ConexaoBanco/Conexao.java" />
       </list>
     </option>
   </component>
@@ -364,8 +341,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
+    <option name="x" value="60" />
+    <option name="width" value="1313" />
     <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -377,12 +354,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-<<<<<<< HEAD
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-=======
->>>>>>> Arthur
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -394,6 +365,12 @@
               <item name="UauMarte" type="b2602c69:ProjectViewProjectNode" />
               <item name="UauMarte" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UauMarte" type="b2602c69:ProjectViewProjectNode" />
+              <item name="UauMarte" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="CadastroProdutos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UauMarte" type="b2602c69:ProjectViewProjectNode" />
@@ -412,24 +389,19 @@
               <item name="UauMarte" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TelaCadastroCliente" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
             </path>
             <path>
               <item name="UauMarte" type="b2602c69:ProjectViewProjectNode" />
               <item name="UauMarte" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="TelaLogin" type="462c0819:PsiDirectoryNode" />
-=======
->>>>>>> Arthur
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-<<<<<<< HEAD
-=======
+      <pane id="PackagesPane" />
       <pane id="Scope" />
->>>>>>> Arthur
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -442,8 +414,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537552824525" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537993633150" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -558,7 +531,6 @@
       <workItem from="1537471431925" duration="4831000" />
       <workItem from="1537544866867" duration="5082000" />
       <workItem from="1537551500973" duration="1560000" />
-<<<<<<< HEAD
       <workItem from="1537885403410" duration="28000" />
       <workItem from="1537885558498" duration="20000" />
       <workItem from="1537888654736" duration="9924000" />
@@ -566,29 +538,17 @@
       <workItem from="1537968541661" duration="20413000" />
       <workItem from="1538050082272" duration="11690000" />
       <workItem from="1538173215235" duration="490000" />
-=======
-      <workItem from="1538484220161" duration="1045000" />
->>>>>>> Arthur
+      <workItem from="1538487092485" duration="63000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="65232000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.30484116" />
-=======
-    <option name="totallyTimeSpent" value="17909000" />
+    <option name="totallyTimeSpent" value="65295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.27760968" />
->>>>>>> Arthur
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.30937973" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -597,11 +557,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-<<<<<<< HEAD
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17868853" />
-=======
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33076924" />
->>>>>>> Arthur
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17868853" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -611,13 +567,8 @@
       <window_info anchor="bottom" id="Problems" order="9" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
-<<<<<<< HEAD
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.3295082" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3262295" />
-=======
-      <window_info anchor="bottom" id="Event Log" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.3286385" />
->>>>>>> Arthur
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -650,39 +601,8 @@
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/event/EventHandler.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/Menu.java" />
-=======
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/event/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/scene/control/Menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="231" column="62" selection-start-line="231" selection-start-column="62" selection-end-line="231" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelaLogin/ControllerTelaLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
->>>>>>> Arthur
     <entry file="file://$PROJECT_DIR$/src/ControllerClass/ControllerStart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -720,7 +640,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/FXMLFILES/FXML_PesquisaProdutos.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -765,130 +684,80 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/lang/String.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/time/format/DateTimeFormatter.class" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/jre/lib/rt.jar!/java/time/LocalDate.class" />
-=======
->>>>>>> Arthur
     <entry file="file://$PROJECT_DIR$/src/TelaPrincipal/ControllerTelaPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="28" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CadastroProdutos/FXML_TelaCadastroController.java">
+    <entry file="file://$PROJECT_DIR$/src/CadastroProdutos/TelaCadastro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="92" column="4" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/glass/ui/View.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/scene/control/behavior/BehaviorBase.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/com/sun/javafx/binding/ExpressionHelper.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/javafx-src.zip!/javafx/beans/property/ReadOnlyBooleanPropertyBase.java" />
-    <entry file="file://$PROJECT_DIR$/src/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/FXMLFILES/TelaCadastro.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FXMLFILES/FXML_PesquisaProdutos.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
->>>>>>> Arthur
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/FXMLFILES/TelaCadastro.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-=======
     <entry file="file://$PROJECT_DIR$/src/TelaCadastroCliente/ControllerTelaCadastroCliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="108" column="71" lean-forward="true" selection-start-line="108" selection-start-column="71" selection-end-line="108" selection-end-column="71" />
+        <state relative-caret-position="17">
+          <caret line="280" column="17" selection-start-line="280" selection-start-column="17" selection-end-line="280" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#ControllerTelaCadastroCliente#0" />
+            <element signature="method#f_CadastrarCliente#0;class#ControllerTelaCadastroCliente#0" />
+            <element signature="method#f_GoToLogin#0;class#ControllerTelaCadastroCliente#0" />
+            <element signature="method#addUFS#0;class#ControllerTelaCadastroCliente#0" />
           </folding>
->>>>>>> Arthur
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/CadastroProdutos/FXML_TelaCadastroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConexaoBanco/Conexao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelaLogin/ControllerTelaLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="83" column="106" lean-forward="true" selection-start-line="83" selection-start-column="106" selection-end-line="83" selection-end-column="106" />
-=======
-    <entry file="file://$PROJECT_DIR$/src/CadastroProdutos/TelaCadastro.java">
+        <state relative-caret-position="986">
+          <caret line="83" column="106" selection-start-line="83" selection-start-column="106" selection-end-line="83" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CadastroProdutos/FXML_TelaCadastroController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
->>>>>>> Arthur
+        <state relative-caret-position="1598">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DAO/PessoaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="206">
+        <state relative-caret-position="663">
           <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
-=======
-        <state relative-caret-position="1411">
-          <caret line="98" column="30" lean-forward="true" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
->>>>>>> Arthur
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ConexaoBanco/Conexao.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-410">
-          <caret line="280" column="78" lean-forward="true" selection-start-line="280" selection-start-column="78" selection-end-line="280" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2155#2163#0" expanded="true" />
-            <element signature="method#f_CadastrarCliente#0;class#ControllerTelaCadastroCliente#0" />
-            <element signature="method#f_GoToLogin#0;class#ControllerTelaCadastroCliente#0" />
-            <element signature="method#addUFS#0;class#ControllerTelaCadastroCliente#0" />
-          </folding>
-=======
-        <state relative-caret-position="166">
-          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
->>>>>>> Arthur
+        <state relative-caret-position="425">
+          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FXMLFILES/TelaCadastro.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

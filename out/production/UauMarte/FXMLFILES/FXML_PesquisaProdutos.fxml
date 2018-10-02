@@ -6,11 +6,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroProdutos.FXML_PesquisaProdutosController">
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="435.0" prefWidth="600.0" style="-fx-background-color: rgb(40,40,40);" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroProdutos.FXML_PesquisaProdutosController">
    <children>
-      <Button fx:id="bt_pesquisar" layoutX="518.0" layoutY="28.0" mnemonicParsing="false" onAction="#f_pesquisar" text="Pesquisar" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="28.0" />
-      <TextField fx:id="tf_pesquisa" layoutX="24.0" layoutY="28.0" prefHeight="25.0" prefWidth="467.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="28.0" />
-      <TableView fx:id="tv_resultado" layoutX="30.0" layoutY="70.0" prefHeight="310.0" prefWidth="542.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="70.0">
+      <Button id="bt-login-cliente" fx:id="bt_pesquisar" layoutX="518.0" layoutY="28.0" mnemonicParsing="false" onAction="#f_pesquisar" stylesheets="@../style/style.css" text="Pesquisar" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="28.0" />
+      <TextField id="bt-login-cliente" fx:id="tf_pesquisa" layoutX="24.0" layoutY="28.0" prefHeight="25.0" prefWidth="467.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="28.0" />
+      <TableView fx:id="tv_resultado" layoutX="30.0" layoutY="69.0" onMouseClicked="#f_seleciona" prefHeight="310.0" prefWidth="542.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="69.0">
         <columns>
           <TableColumn fx:id="col_cod" prefWidth="75.0" text="Código" />
           <TableColumn fx:id="col_nome" maxWidth="1.7976931348623157E308" prefWidth="368.0" text="Nome" />
@@ -20,5 +20,6 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <Button id="bt-login-cliente" fx:id="bt_voltar" layoutX="503.0" layoutY="395.0" mnemonicParsing="false" onAction="#f_voltar" prefHeight="25.0" prefWidth="67.0" stylesheets="@../style/style.css" text="voltar" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="30.0" />
    </children>
 </AnchorPane>
