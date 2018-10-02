@@ -2,7 +2,6 @@ package TelaCadastroCliente;
 
 import ControllerClass.ControllerStart;
 import DAO.PessoaDAO;
-import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -439,7 +438,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
 
 
     @FXML
-    void f_CadastrarCliente(ActionEvent event) throws IOException {
+    void f_CadastrarCliente(ActionEvent event) {
         if(checkCampos(tf_CadastroNome.getText(), tf_CadastroCPF.getText(), tf_CadastroDataNasc.getText(),
                 tf_CadastroEmail.getText(), pf_CadastroSenha.getText(),tf_CadastroCEP.getText(),
                 tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(),
@@ -449,8 +448,6 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
                     tf_CadastroEmail.getText(), pf_CadastroSenha.getText(), tf_CadastroCEP.getText(),
                     tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(), tf_Complemento.getText(),
                     tf_CadastroBairro.getText(), tf_CadastroCidade.getText(), tf_CadastroUF.getText());
-            ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
-            controllerTelaPrincipal.start(controllerStart.getStage());
         }else
             lb_Check.setText("Preencha todos os campos obrigatórios");
 
