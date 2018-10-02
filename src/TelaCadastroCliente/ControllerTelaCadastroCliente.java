@@ -111,10 +111,8 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
 
     private ControllerStart controllerStart = new ControllerStart();
 
-    public void start(Stage stage) {
-        try {
+    public void start(Stage stage) throws IOException {
             controllerStart.initScreen("/FXMLFILES/TelaCadastro.fxml","Cadastre-se", controllerStart.getStage());
-        } catch(IOException e) { }
     }
     
     @Override
