@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class Conexao {
 
+    //TEM QUE CRIAR UM BANCO COM O MESMO NOME E SENHA
     private static String usuario = "postgres";
     private static String senha = "uaumarte";
     private static String banco = "uaumarte";
