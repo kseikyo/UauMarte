@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: rgb(14,14,14);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerTelaCatalogo">
+   <children>
+      <ImageView fitHeight="134.0" fitWidth="113.0" layoutX="124.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXHamburger fx:id="ham_Back" layoutX="64.0" layoutY="523.0" prefHeight="37.0" prefWidth="32.0" />
+      <ImageView fx:id="img_first" fitHeight="134.0" fitWidth="113.0" layoutX="275.0" layoutY="475.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="134.0" fitWidth="113.0" layoutX="68.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@uaumarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_Second" fitHeight="134.0" fitWidth="113.0" layoutX="451.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="img_Third" fitHeight="134.0" fitWidth="113.0" layoutX="627.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXHamburger fx:id="ham_Next" layoutX="771.0" layoutY="523.0" prefHeight="37.0" prefWidth="32.0" />
+      <JFXButton fx:id="bt_leave" ellipsisString="" layoutX="777.0" layoutY="49.0" onAction="#f_goToLogin" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
+      <JFXButton fx:id="bt_user" ellipsisString="" layoutX="892.0" layoutY="49.0" onAction="#f_openUserInfo" styleClass="bt-leave" textFill="#0d0d0d" />
+   </children>
+</AnchorPane>
