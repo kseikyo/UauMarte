@@ -2,6 +2,7 @@ package TelaCadastroCliente;
 
 import ControllerClass.ControllerStart;
 import DAO.PessoaDAO;
+import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -11,6 +12,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -438,7 +440,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
 
 
     @FXML
-    void f_CadastrarCliente(ActionEvent event) {
+    void f_CadastrarCliente(ActionEvent event) throws InterruptedException {
         if(checkCampos(tf_CadastroNome.getText(), tf_CadastroCPF.getText(), tf_CadastroDataNasc.getText(),
                 tf_CadastroEmail.getText(), pf_CadastroSenha.getText(),tf_CadastroCEP.getText(),
                 tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(),
@@ -448,6 +450,11 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
                     tf_CadastroEmail.getText(), pf_CadastroSenha.getText(), tf_CadastroCEP.getText(),
                     tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(), tf_Complemento.getText(),
                     tf_CadastroBairro.getText(), tf_CadastroCidade.getText(), tf_CadastroUF.getText());
+            //CADASTRO REALIZADO COM SUCESSO
+            lb_Check.setText("Cadastro realizado com sucesso!");
+            TimeUnit.SECONDS.sleep(4);
+            ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
+            controllerTelaLogin.start(this.controllerStart.getStage());
         }else
             lb_Check.setText("Preencha todos os campos obrigatórios");
 

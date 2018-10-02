@@ -91,7 +91,6 @@ public class PessoaDAO {
             System.out.println(comando);
             comando.execute();
             comando.close();
-            System.out.println("Cadastro realizado com sucesso!");
         } catch (SQLException e) {
             System.out.println("Erro ao inserir!");
         }
