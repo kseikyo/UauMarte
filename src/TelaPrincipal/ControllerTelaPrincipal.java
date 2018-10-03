@@ -2,6 +2,7 @@ package TelaPrincipal;
 
 import CadastroProdutos.TelaCadastro;
 import ControllerClass.ControllerStart;
+import TelaCatalogo.ControllerTelaCatalogo;
 import TelaLogin.ControllerTelaLogin;
 import javafx.application.Application;
 import javafx.fxml.FXML;
@@ -27,6 +28,12 @@ public class ControllerTelaPrincipal extends Application {
     public void f_GoToCadastroP() throws Exception{
         TelaCadastro telaCadastro = new TelaCadastro();
         telaCadastro.start(controllerStart.getStage());
+    }
+
+    @FXML
+    public void f_GoToCatalogo() throws IOException{
+        ControllerTelaCatalogo controllerTelaCatalogo = new ControllerTelaCatalogo();
+        controllerTelaCatalogo.start(controllerStart.getStage());
     }
 
 }

@@ -19,6 +19,11 @@
               <MenuItem mnemonicParsing="false" onAction="#f_GoToLogin" text="Sair" />
             </items>
           </Menu>
+            <Menu mnemonicParsing="false" text="Comprar">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#f_GoToCatalogo" text="Abrir catálogo" />
+              </items>
+            </Menu>
         </menus>
       </MenuBar>
    </top>
