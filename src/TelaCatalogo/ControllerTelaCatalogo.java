@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -46,8 +47,49 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @FXML
     private JFXButton bt_user;
 
+    @FXML
+    private Label lb_firsName;
+
+    @FXML
+    private Label lb_secondName;
+
+    @FXML
+    private Label lb_thirdName;
+
+    @FXML
+    private Label lb_fourthName;
+
+    @FXML
+    private Label lb_firstPrice;
+
+    @FXML
+    private Label lb_secondPrice;
+
+    @FXML
+    private Label lb_thirdPrice;
+
+    @FXML
+    private Label lb_fourthPrice;
+
+    @FXML
+    private JFXButton bt_addFirst;
+
+    @FXML
+    private JFXButton bt_addSecond;
+
+    @FXML
+    private JFXButton bt_addThird;
+
+    @FXML
+    private JFXButton bt_addFourth;
+
+
     private int pos = 0;
-    private int once = 0;
+    private int pos2 = 1;
+    private int pos3 = 2;
+    private int pos4 = 3;
+
+    private static int once = 0;
 
     private Image first = null;
     private Image second = null;
@@ -67,8 +109,6 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         this.initProdutos();
-
-        Image i = new Image("/FXMLFILES/uaumarte.png");
 
         Image user = new Image(getClass().getResourceAsStream("/FXMLFILES/user.png"));
         bt_user.getStyleClass().removeAll("bt-leave, focus");
@@ -90,6 +130,23 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         bt_right.getStyleClass().add("bt-leave");
         bt_right.setGraphic(new ImageView(right));
 
+        Image plus = new Image(getClass().getResourceAsStream("/FXMLFILES/plus.png"));
+        bt_addFirst.getStyleClass().removeAll("bt-leave, focus");
+        bt_addFirst.getStyleClass().add("bt-leave");
+        bt_addFirst.setGraphic(new ImageView(plus));
+
+        bt_addSecond.getStyleClass().removeAll("bt-leave, focus");
+        bt_addSecond.getStyleClass().add("bt-leave");
+        bt_addSecond.setGraphic(new ImageView(plus));
+
+        bt_addThird.getStyleClass().removeAll("bt-leave, focus");
+        bt_addThird.getStyleClass().add("bt-leave");
+        bt_addThird.setGraphic(new ImageView(plus));
+
+        bt_addFourth.getStyleClass().removeAll("bt-leave, focus");
+        bt_addFourth.getStyleClass().add("bt-leave");
+        bt_addFourth.setGraphic(new ImageView(plus));
+
         //This event handlers are gonna be used to iterate over the linked list that has all the products images
         //As the screen will have 5 images, when the left arrow is clicked, it will change every image and
         //description
@@ -109,45 +166,19 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @FXML
     private void f_LoadLeft() {
-        if(pos > 0)
-            pos--;
         System.out.println(pos);
         if(checkListLeft(pos)) {
-            try {
-                first = new Image(list.get(pos).getUrlImagem());
-                img_first.setImage(first);
-                second = new Image(list.get(pos+1).getUrlImagem());
-                img_second.setImage(second);
-                third = new Image(list.get(pos+2).getUrlImagem());
-                img_third.setImage(third);
-            }catch (NullPointerException e){
-                e.getMessage();
-            }
-
+            pos--; pos2--; pos3--; pos4--;
+            changeProd();
         }
     }
 
     @FXML
     private void f_LoadRight() {
-        if(pos < list.size())
-            pos++;
-        System.out.println(pos);
-        if(checkListRight(pos)) {
-            try {
-                first = new Image(list.get(pos).getUrlImagem());
-                img_first.setImage(first);
-
-                second = new Image(list.get(pos + 1).getUrlImagem());
-                img_second.setImage(second);
-
-                third = new Image(list.get(pos + 2).getUrlImagem());
-                img_third.setImage(third);
-
-                fourth = new Image(list.get(pos + 3).getUrlImagem());
-                img_fourth.setImage(fourth);
-            }catch(NullPointerException e){
-                e.getMessage();
-            }
+        System.out.println(pos4);
+        if(checkListRight()) {
+            pos++; pos2++; pos3++; pos4++;
+            changeProd();
         }
 
     }
@@ -157,43 +188,78 @@ public class ControllerTelaCatalogo extends Application implements Initializable
             return;
         list = ProdutoDAO.retornarTodosProdutos();
 
-        try {
-            first = new Image(list.get(pos).getUrlImagem());
-            img_first.setImage(first);
-        }catch (Exception e){
-
-        }
-        try {
-            second = new Image(list.get(pos+1).getUrlImagem());
-            img_second.setImage(second);
-        }catch (Exception e){
-
-        }
-        try {
-            third = new Image(list.get(pos+2).getUrlImagem());
-            img_third.setImage(third);
-        }catch (Exception e){
-
-        }
+        changeProd();
+        pos++;
+        pos2++;
+        pos3++;
+        pos4++;
         once++;
     }
 
     private boolean checkListLeft(int pos) {
-        if(pos >= 1) return true;
+        try {
+            if (pos >= 1) return true;
+        }catch(NullPointerException e) { }
         return false;
     }
 
-    private boolean checkListRight(int pos) {
+    private boolean checkListRight() {
         try{
-            if(pos+3 < list.size())
+            if(pos4 <= list.size()-2)
                 return true;
         }catch (IndexOutOfBoundsException e) {
+            throw new IndexOutOfBoundsException("toca o barco");
         }
         return false;
     }
 
     public LinkedList<Produto> getList() {
         return this.list;
+    }
+
+    private void changeProd() {
+        try {
+            first = new Image(list.get(pos).getUrlImagem());
+            img_first.setImage(first);
+            lb_firsName.setText(list.get(pos).getDescricao());
+            lb_firstPrice.setText(String.valueOf(list.get(pos).getPreco()));
+
+            second = new Image(list.get(pos2).getUrlImagem());
+            img_second.setImage(second);
+            lb_secondName.setText(list.get(pos2).getDescricao());
+            lb_secondPrice.setText(String.valueOf(list.get(pos2).getPreco()));
+
+            third = new Image(list.get(pos3).getUrlImagem());
+            img_third.setImage(third);
+            lb_thirdName.setText(list.get(pos3).getDescricao());
+            lb_thirdPrice.setText(String.valueOf(list.get(pos3).getPreco()));
+
+            fourth = new Image(list.get(pos4).getUrlImagem());
+            img_fourth.setImage(fourth);
+            lb_fourthName.setText(list.get(pos4).getDescricao());
+            lb_fourthPrice.setText(String.valueOf(list.get(pos4).getPreco()));
+        }catch(NullPointerException e){
+        }
+    }
+
+    @FXML
+    void f_AddFirst(ActionEvent event) {
+
+    }
+
+    @FXML
+    void f_AddFourth(ActionEvent event) {
+
+    }
+
+    @FXML
+    void f_AddSecond(ActionEvent event) {
+
+    }
+
+    @FXML
+    void f_AddThird(ActionEvent event) {
+
     }
 
 }
