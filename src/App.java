@@ -12,7 +12,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         ControllerStart controllerStart = new ControllerStart();
 
-        controllerStart.initScreen("/FXMLFILES/TelaInicial.fxml", "Uau!Marte", stage);
+        controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml", "Uau!Marte", stage);
 
     }
 

@@ -11,6 +11,7 @@ package ControllerClass;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -42,12 +43,14 @@ public class ControllerStart {
         loader.setLocation(getClass().getResource(path));
         Parent root = loader.load();
 
+        //zap zap
+        stage.getIcons().add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX3gawRNp-MGONj-ItirR5vHOUy0KElJbeRmUp45RJPJCtWN2tVA"));
         ControllerStart.stage = stage;
         Scene scene = new Scene(root);
         ControllerStart.stage.setTitle(title);
-        ControllerStart.stage.setMaximized(true);
-        ControllerStart.stage.setHeight(stage.getMaxHeight());
-        ControllerStart.stage.setWidth(stage.getMaxWidth());
+        //ControllerStart.stage.setMaximized(true);
+        //ControllerStart.stage.setHeight(stage.getMaxHeight());
+        //ControllerStart.stage.setWidth(stage.getMaxWidth());
         ControllerStart.stage.setResizable(false);
 
 

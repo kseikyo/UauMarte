@@ -109,7 +109,8 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @FXML
     private void f_LoadLeft() {
-        pos--;
+        if(pos > 0)
+            pos--;
         System.out.println(pos);
         if(checkListLeft(pos)) {
             try {
@@ -128,7 +129,8 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @FXML
     private void f_LoadRight() {
-        pos++;
+        if(pos < list.size())
+            pos++;
         System.out.println(pos);
         if(checkListRight(pos)) {
             try {
