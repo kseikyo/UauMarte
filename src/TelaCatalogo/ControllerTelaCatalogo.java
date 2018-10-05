@@ -107,15 +107,16 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     private int pos3 = 2;
     private int pos4 = 3;
 
-    private static int once = 0;
+    private int once = 0;
 
     private Image first = null;
     private Image second = null;
     private Image third = null;
     private Image fourth = null;
 
-    public ControllerStart controllerStart = new ControllerStart();
+    private ControllerStart controllerStart = new ControllerStart();
 
+    private ObservableList<Carrinho> result ;
 
 
     @Override
@@ -129,51 +130,50 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         this.initProdutos();
 
 
-        //ALL THIS LINES ARE USED TO SET THE BUTTONS TO BE SOME ICON
-            Image user = new Image(getClass().getResourceAsStream("/FXMLFILES/user.png"));
-            bt_user.getStyleClass().removeAll("bt-leave, focus");
-            bt_user.getStyleClass().add("bt-leave");
-            bt_user.setGraphic(new ImageView(user));
+        Image user = new Image(getClass().getResourceAsStream("/FXMLFILES/user.png"));
+        bt_user.getStyleClass().removeAll("bt-leave, focus");
+        bt_user.getStyleClass().add("bt-leave");
+        bt_user.setGraphic(new ImageView(user));
 
-            Image leave = new Image(getClass().getResourceAsStream("/FXMLFILES/leave.png"));
-            bt_leave.getStyleClass().removeAll("bt-leave, focus");
-            bt_leave.getStyleClass().add("bt-leave");
-            bt_leave.setGraphic(new ImageView(leave));
+        Image leave = new Image(getClass().getResourceAsStream("/FXMLFILES/leave.png"));
+        bt_leave.getStyleClass().removeAll("bt-leave, focus");
+        bt_leave.getStyleClass().add("bt-leave");
+        bt_leave.setGraphic(new ImageView(leave));
 
-            Image left = new Image(getClass().getResourceAsStream("/FXMLFILES/left.png"));
-            bt_left.getStyleClass().removeAll("bt-leave, focus");
-            bt_left.getStyleClass().add("bt-leave");
-            bt_left.setGraphic(new ImageView(left));
+        Image left = new Image(getClass().getResourceAsStream("/FXMLFILES/left.png"));
+        bt_left.getStyleClass().removeAll("bt-leave, focus");
+        bt_left.getStyleClass().add("bt-leave");
+        bt_left.setGraphic(new ImageView(left));
 
-            Image right = new Image(getClass().getResourceAsStream("/FXMLFILES/right.png"));
-            bt_right.getStyleClass().removeAll("bt-leave, focus");
-            bt_right.getStyleClass().add("bt-leave");
-            bt_right.setGraphic(new ImageView(right));
+        Image right = new Image(getClass().getResourceAsStream("/FXMLFILES/right.png"));
+        bt_right.getStyleClass().removeAll("bt-leave, focus");
+        bt_right.getStyleClass().add("bt-leave");
+        bt_right.setGraphic(new ImageView(right));
 
-            Image plus = new Image(getClass().getResourceAsStream("/FXMLFILES/plus.png"));
-            bt_addFirst.getStyleClass().removeAll("bt-leave, focus");
-            bt_addFirst.getStyleClass().add("bt-leave");
-            bt_addFirst.setGraphic(new ImageView(plus));
+        Image plus = new Image(getClass().getResourceAsStream("/FXMLFILES/plus.png"));
+        bt_addFirst.getStyleClass().removeAll("bt-leave, focus");
+        bt_addFirst.getStyleClass().add("bt-leave");
+        bt_addFirst.setGraphic(new ImageView(plus));
 
-            bt_addSecond.getStyleClass().removeAll("bt-leave, focus");
-            bt_addSecond.getStyleClass().add("bt-leave");
-            bt_addSecond.setGraphic(new ImageView(plus));
+        bt_addSecond.getStyleClass().removeAll("bt-leave, focus");
+        bt_addSecond.getStyleClass().add("bt-leave");
+        bt_addSecond.setGraphic(new ImageView(plus));
 
-            bt_addThird.getStyleClass().removeAll("bt-leave, focus");
-            bt_addThird.getStyleClass().add("bt-leave");
-            bt_addThird.setGraphic(new ImageView(plus));
+        bt_addThird.getStyleClass().removeAll("bt-leave, focus");
+        bt_addThird.getStyleClass().add("bt-leave");
+        bt_addThird.setGraphic(new ImageView(plus));
 
-            bt_addFourth.getStyleClass().removeAll("bt-leave, focus");
-            bt_addFourth.getStyleClass().add("bt-leave");
-            bt_addFourth.setGraphic(new ImageView(plus));
+        bt_addFourth.getStyleClass().removeAll("bt-leave, focus");
+        bt_addFourth.getStyleClass().add("bt-leave");
+        bt_addFourth.setGraphic(new ImageView(plus));
 
-            //Config of tableview
+        //Config of tableview
 
         col_nome.setCellValueFactory(new PropertyValueFactory<>("descricao"));
         col_preco.setCellValueFactory(new PropertyValueFactory<>("preco"));
         col_quantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
-        ObservableList<Carrinho> result = FXCollections.observableArrayList() ;
-        tbv_carrinho.setItems(result);
+        this.result = FXCollections.observableArrayList() ;
+        tbv_carrinho.setItems(this.result);
 
     }
 
@@ -213,10 +213,6 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         list = ProdutoDAO.retornarTodosProdutos();
 
         changeProd();
-        pos++;
-        pos2++;
-        pos3++;
-        pos4++;
         once++;
     }
 
@@ -269,27 +265,50 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @FXML
     void f_AddFirst(ActionEvent event) {
 
-        Carrinho c = new Carrinho();
-        c.setCod_prod(list.get(pos).getCodigo());
-        c.setDescricao(list.get(pos).getDescricao());
-        c.setPreco(list.get(pos).getPreco());
-        c.setQuantidade(1);
-        //carrinho.add()
-        //tbv_carrinho.getItems().add()
+        addItem(pos);
+
     }
 
     @FXML
     void f_AddFourth(ActionEvent event) {
-
+        addItem(pos4);
     }
 
     @FXML
     void f_AddSecond(ActionEvent event) {
-
+        addItem(pos2);
     }
 
     @FXML
     void f_AddThird(ActionEvent event) {
+        addItem(pos3);
+
+
+    }
+
+    private void addItem(int pos) {
+        Carrinho c = new Carrinho();
+        for(int i = 0 ; i < carrinho.size(); i++) {
+            if(carrinho.get(i).getCod_prod() == list.get(pos).getCodigo()) {
+                /*System.out.println("c" + carrinho.get(i).getCod_prod());
+                 *System.out.println("l" + list.get(pos).getCodigo());
+                 *System.out.println(tbv_carrinho.getItems().contains(carrinho.get(i)));
+                 * this is working ↓↓↓↓↓ */
+                tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))).setQuantidade(carrinho.get(i).getQuantidade()+1);
+                return;
+                //carrinho.get(i).setQuantidade(carrinho.get(i).getQuantidade()+1);
+                //this one it's worse but it works ↓↓↓↓
+                //tbv_carrinho.getItems().get(i).setQuantidade(carrinho.get(i).getQuantidade()+1);
+            }
+        }
+
+        c.setCod_prod(list.get(pos).getCodigo());
+        c.setDescricao(list.get(pos).getDescricao());
+        c.setPreco(list.get(pos).getPreco());
+        c.setQuantidade(1);
+        carrinho.add(c);
+
+        tbv_carrinho.getItems().add(c);
 
     }
 
