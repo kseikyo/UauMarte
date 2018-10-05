@@ -17,6 +17,11 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ControllerTelaCatalogo extends Application implements Initializable {
 
@@ -45,6 +50,16 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @FXML
     private JFXButton bt_user;
+    /*
+    @FXML
+    private TableView tbv_Carrinho;
+    @FXML
+    private TableColumn col_nome;
+    @FXML
+    private TableColumn col_preco;
+    @FXML
+    private TableColumn col_quantidade;
+    */
 
     private int pos = 0;
     private int once = 0;
@@ -151,7 +166,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         }
 
     }
-
+    
     private void initProdutos() {
         if(once > 0)
             return;
@@ -195,5 +210,20 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     public LinkedList<Produto> getList() {
         return this.list;
     }
-
+    
+    
+    /*
+    public void initTbv_Carrinho(){
+        col_nome =new TableColumn("Nome");
+        col_preco=new TableColumn("Preco");
+        col_quantidade = new TableColumn("Quantidade");
+        
+        col_nome.setCellValueFactory((param) -> {
+            return 5; //To change body of generated lambdas, choose Tools | Templates.
+        });
+        ObservableList<Produto> result = FXCollections.observableArrayList(list);
+        tbv_Carrinho.getColumns().addAll(col_nome,col_preco,col_quantidade);
+    }
+*/
+    
 }
