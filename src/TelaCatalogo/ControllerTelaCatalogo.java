@@ -2,14 +2,20 @@ package TelaCatalogo;
 
 import ControllerClass.ControllerStart;
 import DAO.ProdutoDAO;
+import Objetos.Carrinho;
 import Objetos.Produto;
 import TelaLogin.ControllerTelaLogin;
 import com.jfoenix.controls.JFXButton;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -83,7 +89,19 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @FXML
     private JFXButton bt_addFourth;
 
+    @FXML
+    private TableView<Carrinho> tbv_carrinho;
 
+    @FXML
+    private TableColumn<Carrinho, String> col_nome;
+
+    @FXML
+    private TableColumn<Carrinho, Double> col_preco;
+
+    @FXML
+    private TableColumn<Carrinho, Double> col_quantidade;
+
+    private LinkedList<Carrinho> carrinho = new LinkedList<>();
     private int pos = 0;
     private int pos2 = 1;
     private int pos3 = 2;
@@ -110,46 +128,52 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     public void initialize(URL location, ResourceBundle resources) {
         this.initProdutos();
 
-        Image user = new Image(getClass().getResourceAsStream("/FXMLFILES/user.png"));
-        bt_user.getStyleClass().removeAll("bt-leave, focus");
-        bt_user.getStyleClass().add("bt-leave");
-        bt_user.setGraphic(new ImageView(user));
 
-        Image leave = new Image(getClass().getResourceAsStream("/FXMLFILES/leave.png"));
-        bt_leave.getStyleClass().removeAll("bt-leave, focus");
-        bt_leave.getStyleClass().add("bt-leave");
-        bt_leave.setGraphic(new ImageView(leave));
+        //ALL THIS LINES ARE USED TO SET THE BUTTONS TO BE SOME ICON
+            Image user = new Image(getClass().getResourceAsStream("/FXMLFILES/user.png"));
+            bt_user.getStyleClass().removeAll("bt-leave, focus");
+            bt_user.getStyleClass().add("bt-leave");
+            bt_user.setGraphic(new ImageView(user));
 
-        Image left = new Image(getClass().getResourceAsStream("/FXMLFILES/left.png"));
-        bt_left.getStyleClass().removeAll("bt-leave, focus");
-        bt_left.getStyleClass().add("bt-leave");
-        bt_left.setGraphic(new ImageView(left));
+            Image leave = new Image(getClass().getResourceAsStream("/FXMLFILES/leave.png"));
+            bt_leave.getStyleClass().removeAll("bt-leave, focus");
+            bt_leave.getStyleClass().add("bt-leave");
+            bt_leave.setGraphic(new ImageView(leave));
 
-        Image right = new Image(getClass().getResourceAsStream("/FXMLFILES/right.png"));
-        bt_right.getStyleClass().removeAll("bt-leave, focus");
-        bt_right.getStyleClass().add("bt-leave");
-        bt_right.setGraphic(new ImageView(right));
+            Image left = new Image(getClass().getResourceAsStream("/FXMLFILES/left.png"));
+            bt_left.getStyleClass().removeAll("bt-leave, focus");
+            bt_left.getStyleClass().add("bt-leave");
+            bt_left.setGraphic(new ImageView(left));
 
-        Image plus = new Image(getClass().getResourceAsStream("/FXMLFILES/plus.png"));
-        bt_addFirst.getStyleClass().removeAll("bt-leave, focus");
-        bt_addFirst.getStyleClass().add("bt-leave");
-        bt_addFirst.setGraphic(new ImageView(plus));
+            Image right = new Image(getClass().getResourceAsStream("/FXMLFILES/right.png"));
+            bt_right.getStyleClass().removeAll("bt-leave, focus");
+            bt_right.getStyleClass().add("bt-leave");
+            bt_right.setGraphic(new ImageView(right));
 
-        bt_addSecond.getStyleClass().removeAll("bt-leave, focus");
-        bt_addSecond.getStyleClass().add("bt-leave");
-        bt_addSecond.setGraphic(new ImageView(plus));
+            Image plus = new Image(getClass().getResourceAsStream("/FXMLFILES/plus.png"));
+            bt_addFirst.getStyleClass().removeAll("bt-leave, focus");
+            bt_addFirst.getStyleClass().add("bt-leave");
+            bt_addFirst.setGraphic(new ImageView(plus));
 
-        bt_addThird.getStyleClass().removeAll("bt-leave, focus");
-        bt_addThird.getStyleClass().add("bt-leave");
-        bt_addThird.setGraphic(new ImageView(plus));
+            bt_addSecond.getStyleClass().removeAll("bt-leave, focus");
+            bt_addSecond.getStyleClass().add("bt-leave");
+            bt_addSecond.setGraphic(new ImageView(plus));
 
-        bt_addFourth.getStyleClass().removeAll("bt-leave, focus");
-        bt_addFourth.getStyleClass().add("bt-leave");
-        bt_addFourth.setGraphic(new ImageView(plus));
+            bt_addThird.getStyleClass().removeAll("bt-leave, focus");
+            bt_addThird.getStyleClass().add("bt-leave");
+            bt_addThird.setGraphic(new ImageView(plus));
 
-        //This event handlers are gonna be used to iterate over the linked list that has all the products images
-        //As the screen will have 5 images, when the left arrow is clicked, it will change every image and
-        //description
+            bt_addFourth.getStyleClass().removeAll("bt-leave, focus");
+            bt_addFourth.getStyleClass().add("bt-leave");
+            bt_addFourth.setGraphic(new ImageView(plus));
+
+            //Config of tableview
+
+        col_nome.setCellValueFactory(new PropertyValueFactory<>("descricao"));
+        col_preco.setCellValueFactory(new PropertyValueFactory<>("preco"));
+        col_quantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
+        ObservableList<Carrinho> result = FXCollections.observableArrayList() ;
+        tbv_carrinho.setItems(result);
 
     }
 
@@ -219,22 +243,22 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     private void changeProd() {
         try {
-            first = new Image(list.get(pos).getUrlImagem());
+            first = new Image("file:" +list.get(pos).getUrlImagem());
             img_first.setImage(first);
             lb_firsName.setText(list.get(pos).getDescricao());
             lb_firstPrice.setText(String.valueOf(list.get(pos).getPreco()));
 
-            second = new Image(list.get(pos2).getUrlImagem());
+            second = new Image("file:" +list.get(pos2).getUrlImagem());
             img_second.setImage(second);
             lb_secondName.setText(list.get(pos2).getDescricao());
             lb_secondPrice.setText(String.valueOf(list.get(pos2).getPreco()));
 
-            third = new Image(list.get(pos3).getUrlImagem());
+            third = new Image("file:" +list.get(pos3).getUrlImagem());
             img_third.setImage(third);
             lb_thirdName.setText(list.get(pos3).getDescricao());
             lb_thirdPrice.setText(String.valueOf(list.get(pos3).getPreco()));
 
-            fourth = new Image(list.get(pos4).getUrlImagem());
+            fourth = new Image("file:" +list.get(pos4).getUrlImagem());
             img_fourth.setImage(fourth);
             lb_fourthName.setText(list.get(pos4).getDescricao());
             lb_fourthPrice.setText(String.valueOf(list.get(pos4).getPreco()));
@@ -245,6 +269,13 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @FXML
     void f_AddFirst(ActionEvent event) {
 
+        Carrinho c = new Carrinho();
+        c.setCod_prod(list.get(pos).getCodigo());
+        c.setDescricao(list.get(pos).getDescricao());
+        c.setPreco(list.get(pos).getPreco());
+        c.setQuantidade(1);
+        //carrinho.add()
+        //tbv_carrinho.getItems().add()
     }
 
     @FXML

@@ -21,7 +21,7 @@ public class ProdutoDAO {
         String sql = "";
         sql += "SELECT * FROM produto";
 
-        int count = 1;
+        //int count = 1;
 
         LinkedList<Produto> list = new LinkedList<>();
 
@@ -38,8 +38,8 @@ public class ProdutoDAO {
                 p.setPreco(rs.getDouble("preco"));
                 p.setVendaPor(rs.getString("vendapor"));
                 p.setMarca(rs.getString("marca"));
-                p.setUrlImagem("/IMG_produtos/"+count+".JPG");
-                count++;
+                p.setUrlImagem(rs.getString("imagem"));
+                //count++;
                 p.setObservacao(rs.getString("observacao"));
 
                 list.add(p);
@@ -51,9 +51,6 @@ public class ProdutoDAO {
                 e.getCause();
                 e.printStackTrace();
             }
-        for(int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i).getUrlImagem());
-        }
         return list;
     }
 }
