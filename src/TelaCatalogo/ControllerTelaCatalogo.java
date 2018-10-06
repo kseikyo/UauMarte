@@ -1,6 +1,7 @@
 package TelaCatalogo;
 
 import ControllerClass.ControllerStart;
+import DAO.CompraDAO;
 import DAO.ProdutoDAO;
 import Objetos.Carrinho;
 import Objetos.Produto;
@@ -24,6 +25,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.time.LocalTime;
 import java.util.LinkedList;
@@ -123,6 +125,9 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @FXML
     private JFXDatePicker dp_data;
 
+    @FXML
+    private Label lb_finalizar;
+
     private LinkedList<Carrinho> carrinho = new LinkedList<>();
     private int pos = 0;
     private int pos2 = 1;
@@ -151,11 +156,10 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     public void initialize(URL location, ResourceBundle resources) {
         this.initProdutos();
 
-
-        Image user = new Image(getClass().getResourceAsStream("/FXMLFILES/user.png"));
-        bt_user.getStyleClass().removeAll("bt-leave, focus");
-        bt_user.getStyleClass().add("bt-leave");
-        bt_user.setGraphic(new ImageView(user));
+        //Image user = new Image(getClass().getResourceAsStream("/FXMLFILES/user.png"));
+        //bt_user.getStyleClass().removeAll("bt-leave, focus");
+        //bt_user.getStyleClass().add("bt-leave");
+        //bt_user.setGraphic(new ImageView(user));
 
         Image leave = new Image(getClass().getResourceAsStream("/FXMLFILES/leave.png"));
         bt_leave.getStyleClass().removeAll("bt-leave, focus");
@@ -328,13 +332,14 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     void f_removeThird(ActionEvent event) { removeItem(pos3); }
 
     @FXML
-    void f_FinalizarCompra(ActionEvent event) {
+    void f_FinalizarCompra(ActionEvent event) throws SQLException {
         System.out.println(tp_hora.getValue());
         System.out.println(dp_data.getValue());
         Timestamp t = Timestamp.valueOf(dp_data.getValue().toString() + " " + tp_hora.getValue() + ":"+ tp_hora.getValue().getSecond());
         System.out.println(t);
-        //CompraDAO.CriarCompra(carrinho, t);
-
+        CompraDAO.CriarCompra(result, t);
+        result.clear();
+        lb_finalizar.setText("Compra finalizada com sucesso!");
     }
 
     private void addItem(int pos) {

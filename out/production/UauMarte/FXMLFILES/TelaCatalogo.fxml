@@ -66,5 +66,6 @@
       <JFXTimePicker fx:id="tp_hora" layoutX="836.0" layoutY="524.0" />
       <Separator layoutX="818.0" layoutY="471.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="6.0" />
       <JFXDatePicker fx:id="dp_data" layoutX="836.0" layoutY="485.0" />
+      <Label fx:id="lb_finalizar" layoutX="626.0" layoutY="225.0" />
    </children>
 </AnchorPane>

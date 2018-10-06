@@ -44,7 +44,7 @@ public class ControllerStart {
         Parent root = loader.load();
 
         //zap zap
-        stage.getIcons().add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX3gawRNp-MGONj-ItirR5vHOUy0KElJbeRmUp45RJPJCtWN2tVA"));
+        stage.getIcons().add(new Image("/FXMLFILES/39257806_1032626896940813_945450888875474944_n (1).jpg"));
         ControllerStart.stage = stage;
         Scene scene = new Scene(root);
         ControllerStart.stage.setTitle(title);
