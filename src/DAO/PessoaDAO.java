@@ -8,6 +8,7 @@ import java.sql.SQLException;
 
 
 import ControllerClass.ControllerStart;
+import TelaLogin.ControllerTelaLogin;
 import TelaPrincipal.ControllerTelaPrincipal;
 import javafx.scene.control.Label;
 import ConexaoBanco.Conexao;
@@ -30,7 +31,7 @@ public class PessoaDAO {
             e.getLocalizedMessage();
         }
         String sql = "";
-        sql += "SELECT email, senha FROM public.usuario_do_sistema";
+        sql += "SELECT email, senha, idusuario FROM public.usuario_do_sistema";
         sql += " WHERE email = ";
         sql += "'" +email + "'";
         sql += " AND senha = ";
@@ -44,6 +45,7 @@ public class PessoaDAO {
             resultado.next();
             System.out.println(resultado.getString("email"));
             System.out.println(resultado.getString("senha"));
+            ControllerTelaLogin.idusuario = resultado.getInt("idusuario");
             ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
             ControllerStart controllerStart = new ControllerStart();
             controllerTelaPrincipal.start(controllerStart.getStage());

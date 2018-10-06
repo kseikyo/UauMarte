@@ -49,6 +49,8 @@ public class ControllerTelaLogin extends Application implements Initializable {
     @FXML
     private JFXTextField username;
 
+    public static int idusuario;
+
     @FXML
     private JFXPasswordField password;
 

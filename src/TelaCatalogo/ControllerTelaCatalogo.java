@@ -6,6 +6,8 @@ import Objetos.Carrinho;
 import Objetos.Produto;
 import TelaLogin.ControllerTelaLogin;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXTimePicker;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -22,6 +24,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Timestamp;
+import java.time.LocalTime;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
 
@@ -90,6 +94,18 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     private JFXButton bt_addFourth;
 
     @FXML
+    private JFXButton bt_removeFirst;
+
+    @FXML
+    private JFXButton bt_removeSecond;
+
+    @FXML
+    private JFXButton bt_removeThird;
+
+    @FXML
+    private JFXButton bt_removeFourth;
+
+    @FXML
     private TableView<Carrinho> tbv_carrinho;
 
     @FXML
@@ -100,6 +116,12 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @FXML
     private TableColumn<Carrinho, Double> col_quantidade;
+
+    @FXML
+    private JFXTimePicker tp_hora;
+
+    @FXML
+    private JFXDatePicker dp_data;
 
     private LinkedList<Carrinho> carrinho = new LinkedList<>();
     private int pos = 0;
@@ -166,6 +188,17 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         bt_addFourth.getStyleClass().removeAll("bt-leave, focus");
         bt_addFourth.getStyleClass().add("bt-leave");
         bt_addFourth.setGraphic(new ImageView(plus));
+
+        Image minus = new Image(getClass().getResourceAsStream("/FXMLFILES/minus.png"));
+
+        bt_removeFirst.setGraphic(new ImageView(minus));
+
+        bt_removeSecond.setGraphic(new ImageView(minus));
+
+        bt_removeThird.setGraphic(new ImageView(minus));
+
+        bt_removeFourth.setGraphic(new ImageView(minus));
+
 
         //Config of tableview
 
@@ -263,11 +296,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     }
 
     @FXML
-    void f_AddFirst(ActionEvent event) {
-
-        addItem(pos);
-
-    }
+    void f_AddFirst(ActionEvent event) { addItem(pos); }
 
     @FXML
     void f_AddFourth(ActionEvent event) {
@@ -280,9 +309,31 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     }
 
     @FXML
-    void f_AddThird(ActionEvent event) {
-        addItem(pos3);
+    void f_AddThird(ActionEvent event) { addItem(pos3); }
 
+    @FXML
+    void f_removeFirst(ActionEvent event) { removeItem(pos); }
+
+    @FXML
+    void f_removeFourth(ActionEvent event) {
+        removeItem(pos4);
+    }
+
+    @FXML
+    void f_removeSecond(ActionEvent event) {
+        removeItem(pos2);
+    }
+
+    @FXML
+    void f_removeThird(ActionEvent event) { removeItem(pos3); }
+
+    @FXML
+    void f_FinalizarCompra(ActionEvent event) {
+        System.out.println(tp_hora.getValue());
+        System.out.println(dp_data.getValue());
+        Timestamp t = Timestamp.valueOf(dp_data.getValue().toString() + " " + tp_hora.getValue() + ":"+ tp_hora.getValue().getSecond());
+        System.out.println(t);
+        //CompraDAO.CriarCompra(carrinho, t);
 
     }
 
@@ -295,6 +346,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
                  *System.out.println(tbv_carrinho.getItems().contains(carrinho.get(i)));
                  * this is working ↓↓↓↓↓ */
                 tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))).setQuantidade(carrinho.get(i).getQuantidade()+1);
+                tbv_carrinho.getItems().set(tbv_carrinho.getItems().indexOf(carrinho.get(i)), tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))));
                 return;
                 //carrinho.get(i).setQuantidade(carrinho.get(i).getQuantidade()+1);
                 //this one it's worse but it works ↓↓↓↓
@@ -309,7 +361,18 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         carrinho.add(c);
 
         tbv_carrinho.getItems().add(c);
+    }
 
+    private void removeItem(int pos) {
+        for(int i = 0 ; i < carrinho.size(); i++) {
+            if(carrinho.get(i).getCod_prod() == list.get(pos).getCodigo()) {
+                if(carrinho.get(i).getQuantidade() > 0) {
+                    tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))).setQuantidade(carrinho.get(i).getQuantidade() - 1);
+                    tbv_carrinho.getItems().set(tbv_carrinho.getItems().indexOf(carrinho.get(i)), tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))));
+                    return;
+                }
+            }
+        }
     }
 
 }
