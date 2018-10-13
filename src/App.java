@@ -1,3 +1,4 @@
+import TelaCatalogo.ControllerTelaCatalogo;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import ControllerClass.ControllerStart;
@@ -12,6 +13,7 @@ public class App extends Application {
         ControllerStart controllerStart = new ControllerStart();
 
         controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml", "Uau!Marte", stage);
+
     }
 
     public static void main(String[] args) {

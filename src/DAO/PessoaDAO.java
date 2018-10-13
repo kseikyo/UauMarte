@@ -8,9 +8,11 @@ import java.sql.SQLException;
 
 
 import ControllerClass.ControllerStart;
+import TelaLogin.ControllerTelaLogin;
 import TelaPrincipal.ControllerTelaPrincipal;
 import javafx.scene.control.Label;
 import ConexaoBanco.Conexao;
+import org.postgresql.util.PSQLException;
 
 /**
  *
@@ -19,10 +21,17 @@ import ConexaoBanco.Conexao;
 public class PessoaDAO {
     
     public static void pesquisarPessoa(String email, String senha, Label loginResult) throws IOException {
-        Connection conn;
-        conn = Conexao.getConnection();
+        Connection conn = null;
+        try {
+            conn = Conexao.getConnection();
+        }catch(Exception e) {
+            e.printStackTrace();
+            e.getCause();
+            e.getMessage();
+            e.getLocalizedMessage();
+        }
         String sql = "";
-        sql += "SELECT email, senha FROM public.usuario_do_sistema";
+        sql += "SELECT email, senha, idusuario FROM public.usuario_do_sistema";
         sql += " WHERE email = ";
         sql += "'" +email + "'";
         sql += " AND senha = ";
@@ -36,6 +45,7 @@ public class PessoaDAO {
             resultado.next();
             System.out.println(resultado.getString("email"));
             System.out.println(resultado.getString("senha"));
+            ControllerTelaLogin.idusuario = resultado.getInt("idusuario");
             ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
             ControllerStart controllerStart = new ControllerStart();
             controllerTelaPrincipal.start(controllerStart.getStage());
@@ -83,7 +93,6 @@ public class PessoaDAO {
             System.out.println(comando);
             comando.execute();
             comando.close();
-            System.out.println("Cadastro realizado com sucesso!");
         } catch (SQLException e) {
             System.out.println("Erro ao inserir!");
         }

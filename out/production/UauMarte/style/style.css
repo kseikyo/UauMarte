@@ -27,3 +27,19 @@
 	-fx-text-fill: #b6ed6d;
 	
 }
+
+.jfx-hamburguer-icon {
+	-fx-cursor: leftarrow;
+}
+
+.bt-leave {
+	-fx-background-color: rgb(14,14,14);
+	-fx-background-radius: 5,5,4;
+	-fx-background-insets: 0 0 -1 0,0,1;
+}
+#bt-leave {
+	-fx-background-color: rgb(14,14,14);
+	-fx-border-color: rgb(14,14,14);
+	-fx-padding-color: rgb(14,14,14);
+
+}

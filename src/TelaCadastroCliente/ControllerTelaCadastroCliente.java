@@ -2,6 +2,7 @@ package TelaCadastroCliente;
 
 import ControllerClass.ControllerStart;
 import DAO.PessoaDAO;
+import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -10,7 +11,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -111,10 +114,8 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
 
     private ControllerStart controllerStart = new ControllerStart();
 
-    public void start(Stage stage) {
-        try {
+    public void start(Stage stage) throws IOException {
             controllerStart.initScreen("/FXMLFILES/TelaCadastro.fxml","Cadastre-se", controllerStart.getStage());
-        } catch(IOException e) { }
     }
     
     @Override
@@ -153,12 +154,14 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
                     try {
                         String aux = tf_CadastroCPF.getText();
                         String cpf;
-                        cpf = aux.substring(0,3);
-                        cpf+= aux.substring(4,7);
-                        cpf+= aux.substring(8, 11);
-                        cpf+= aux.substring(12, 14);
-                        System.out.println(cpf);
-                        PessoaDAO.pesquisarCPF(cpf, lb_CPF);
+                        if(aux.length() > 10) {
+                            cpf = aux.substring(0, 3);
+                            cpf += aux.substring(4, 7);
+                            cpf += aux.substring(8, 11);
+                            cpf += aux.substring(12, 14);
+                            System.out.println(cpf);
+                            PessoaDAO.pesquisarCPF(cpf, lb_CPF);
+                        }
                     } catch (IOException e) {
 
                     }
@@ -285,6 +288,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
         tf_CadastroCPF.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
             if (!newValue.matches("\\d*"))
                 tf_CadastroCPF.setText(newValue.replaceAll("[^\\d- | ^\\d.]", ""));
+            //tf_CadastroCPF.setText(newValue.replaceAll("^ ([^\\d-]) & ([^\\d.])$", ""));
 
             if (newValue.length() > 14)
                 tf_CadastroCPF.setText(newValue.substring(0, newValue.length() - 1));
@@ -356,6 +360,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldvalue, Boolean newValue) {
                 if (!newValue) {
                     tf_CadastroCEP.validate();
+                    tf_CadastroCEP.setText(tf_CadastroCEP.getText().replaceAll(" ", ""));
                     if(!tf_CadastroCEP.getText().matches(padraocep)) lb_CEP.setText("Cep inválido");
                     else lb_CEP.setText("");
                 }
@@ -409,9 +414,10 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldvalue, Boolean newValue) {
                 if (!newValue) {
                     int val = 0;
+                    tf_CadastroUF.setText(tf_CadastroUF.getText().toUpperCase());
                     for( String uf: UFs) {
                         if(tf_CadastroUF.getText().equals(uf)) {
-
+                            lb_UF.setText("");
                             val++;
                             break;
                         }
@@ -435,7 +441,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
 
 
     @FXML
-    void f_CadastrarCliente(ActionEvent event) {
+    void f_CadastrarCliente(ActionEvent event) throws InterruptedException {
         if(checkCampos(tf_CadastroNome.getText(), tf_CadastroCPF.getText(), tf_CadastroDataNasc.getText(),
                 tf_CadastroEmail.getText(), pf_CadastroSenha.getText(),tf_CadastroCEP.getText(),
                 tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(),
@@ -445,6 +451,11 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
                     tf_CadastroEmail.getText(), pf_CadastroSenha.getText(), tf_CadastroCEP.getText(),
                     tf_CadastroEndereco.getText(), tf_CadastroNumCasa.getText(), tf_Complemento.getText(),
                     tf_CadastroBairro.getText(), tf_CadastroCidade.getText(), tf_CadastroUF.getText());
+            //CADASTRO REALIZADO COM SUCESSO
+            lb_Check.setText("Cadastro realizado com sucesso!");
+            TimeUnit.SECONDS.sleep(4);
+            ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
+            controllerTelaLogin.start(this.controllerStart.getStage());
         }else
             lb_Check.setText("Preencha todos os campos obrigatórios");
 
