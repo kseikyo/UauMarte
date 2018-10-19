@@ -148,7 +148,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        controllerStart.initScreen("/FXMLFILES/TelaCatalogo.fxml", "", controllerStart.getStage());
+        controllerStart.initScreen("/FXMLFILES/TelaCatalogo.fxml", "Uau!Marte", controllerStart.getStage());
 
     }
 

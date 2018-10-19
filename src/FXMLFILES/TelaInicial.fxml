@@ -9,11 +9,6 @@
    <top>
       <MenuBar id="menu" stylesheets="@../style/main.css" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Voltar ao login">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#f_GoToLogin" text="Sair" />
-            </items>
-          </Menu>
             <Menu mnemonicParsing="false" text="Comprar">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#f_GoToCatalogo" text="Abrir catálogo" />
