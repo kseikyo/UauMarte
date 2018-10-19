@@ -43,7 +43,6 @@ public class ControllerStart {
         loader.setLocation(getClass().getResource(path));
         Parent root = loader.load();
 
-        //zap zap
         stage.getIcons().add(new Image("/FXMLFILES/39257806_1032626896940813_945450888875474944_n (1).jpg"));
         ControllerStart.stage = stage;
         Scene scene = new Scene(root);
