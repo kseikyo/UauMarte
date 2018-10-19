@@ -27,7 +27,7 @@
       <JFXButton fx:id="bt_user" ellipsisString="" layoutX="733.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#f_openUserInfo" ripplerFill="#0e0e0e" styleClass="bt-leave" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_left" ellipsisString="" layoutX="43.0" layoutY="385.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadLeft" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_right" ellipsisString="" layoutX="759.0" layoutY="385.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadRight" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <TableView fx:id="tbv_carrinho" layoutX="820.0" prefHeight="479.0" prefWidth="206.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="tbv_carrinho" layoutX="820.0" prefHeight="479.0" prefWidth="206.0" style="-fx-background-color: rgb(20,20,20);" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
           <TableColumn fx:id="col_nome" prefWidth="75.0" text="Nome" />
           <TableColumn fx:id="col_preco" prefWidth="64.0" text="Preço" />
@@ -64,7 +64,7 @@
       <JFXButton fx:id="bt_removeThird" ellipsisString="" layoutX="462.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeThird" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_removeFourth" ellipsisString="" layoutX="641.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeFourth" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXTimePicker fx:id="tp_hora" layoutX="836.0" layoutY="524.0" />
-      <Separator layoutX="818.0" layoutY="471.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="6.0" />
+      <Separator layoutX="817.0" layoutY="480.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="4.0" />
       <JFXDatePicker fx:id="dp_data" layoutX="836.0" layoutY="485.0" />
       <Label fx:id="lb_finalizar" layoutX="626.0" layoutY="225.0" />
    </children>
