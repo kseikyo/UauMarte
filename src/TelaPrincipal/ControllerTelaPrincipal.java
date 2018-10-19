@@ -23,17 +23,19 @@ public class ControllerTelaPrincipal extends Application {
         ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
         controllerTelaLogin.start(controllerStart.getStage());
     }
-
+    /*
     @FXML
     public void f_GoToCadastroP() throws Exception{
         TelaCadastro telaCadastro = new TelaCadastro();
         telaCadastro.start(controllerStart.getStage());
     }
+    */
 
     @FXML
     public void f_GoToCatalogo() throws IOException{
         ControllerTelaCatalogo controllerTelaCatalogo = new ControllerTelaCatalogo();
         controllerTelaCatalogo.start(controllerStart.getStage());
     }
+
 
 }
