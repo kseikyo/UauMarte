@@ -12,12 +12,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
 
 
 public class ControllerStart {
-    private static Stage stage;
+    public static Stage stage;
 
     public ControllerStart() {
 
@@ -45,6 +46,7 @@ public class ControllerStart {
 
         stage.getIcons().add(new Image("/FXMLFILES/39257806_1032626896940813_945450888875474944_n (1).jpg"));
         ControllerStart.stage = stage;
+
         Scene scene = new Scene(root);
         ControllerStart.stage.setTitle(title);
         //ControllerStart.stage.setMaximized(true);
@@ -52,18 +54,20 @@ public class ControllerStart {
         //ControllerStart.stage.setWidth(stage.getMaxWidth());
         ControllerStart.stage.setResizable(false);
 
-
+        stage.setScene(null);
         ControllerStart.stage.setScene(scene);
         ControllerStart.stage.show();
     }
+
+
 
 
     public void addEmptyValidation () {
 
     }
 
-    public Stage getStage() {
+    /*public Stage getStage() {
         return ControllerStart.stage;
-    }
+    }*/
 
 }

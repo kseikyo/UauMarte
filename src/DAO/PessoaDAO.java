@@ -47,14 +47,11 @@ public class PessoaDAO {
             System.out.println(resultado.getString("email"));
             System.out.println(resultado.getString("senha"));
             ControllerTelaLogin.idusuario = resultado.getInt("idusuario");
-            /*
-            ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
 
-            controllerTelaPrincipal.start(controllerStart.getStage());
-            */
             ControllerStart controllerStart = new ControllerStart();
-            ControllerTelaCatalogo controllerTelaCatalogo = new ControllerTelaCatalogo();
-            controllerTelaCatalogo.start(controllerStart.getStage());
+            ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
+            controllerTelaPrincipal.start(ControllerStart.stage);
+
 
         }catch (SQLException e) {
             loginResult.setText("Usuário ou senha incorretos!");

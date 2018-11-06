@@ -64,7 +64,7 @@
       <JFXButton fx:id="bt_removeThird" ellipsisString="" layoutX="462.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeThird" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_removeFourth" ellipsisString="" layoutX="641.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeFourth" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXTimePicker fx:id="tp_hora" layoutX="836.0" layoutY="524.0" />
-      <Separator layoutX="817.0" layoutY="479.0" orientation="VERTICAL" prefHeight="121.0" prefWidth="7.0" />
+      <Separator layoutX="817.0" layoutY="480.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="4.0" />
       <JFXDatePicker fx:id="dp_data" layoutX="836.0" layoutY="485.0" />
       <Label fx:id="lb_finalizar" layoutX="626.0" layoutY="225.0" />
    </children>

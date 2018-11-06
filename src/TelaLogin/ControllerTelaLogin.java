@@ -63,7 +63,7 @@ public class ControllerTelaLogin extends Application implements Initializable {
     @Override
     public void start(Stage stage) {
         try {
-            this.controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml", "Uau!Marte", this.controllerStart.getStage());
+            controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml", "Uau!Marte", ControllerStart.stage);
         } catch(IOException e) { }
     }
     
@@ -75,7 +75,7 @@ public class ControllerTelaLogin extends Application implements Initializable {
         this.LoginPane.getChildren().setAll(pane);
         */
         ControllerTelaCadastroCliente controllerTelaCadastroCliente = new ControllerTelaCadastroCliente();
-        controllerTelaCadastroCliente.start(this.controllerStart.getStage());
+        controllerTelaCadastroCliente.start(ControllerStart.stage);
         
     }
 
