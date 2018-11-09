@@ -8,6 +8,7 @@ import java.sql.SQLException;
 
 
 import ControllerClass.ControllerStart;
+import TelaCatalogo.ControllerTelaCatalogo;
 import TelaLogin.ControllerTelaLogin;
 import TelaPrincipal.ControllerTelaPrincipal;
 import javafx.scene.control.Label;
@@ -46,9 +47,11 @@ public class PessoaDAO {
             System.out.println(resultado.getString("email"));
             System.out.println(resultado.getString("senha"));
             ControllerTelaLogin.idusuario = resultado.getInt("idusuario");
-            ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
+
             ControllerStart controllerStart = new ControllerStart();
-            controllerTelaPrincipal.start(controllerStart.getStage());
+            ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
+            controllerTelaPrincipal.start(ControllerStart.stage);
+
 
         }catch (SQLException e) {
             loginResult.setText("Usuário ou senha incorretos!");
