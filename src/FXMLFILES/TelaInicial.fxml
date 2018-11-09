@@ -5,16 +5,20 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPrincipal.ControllerTelaPrincipal">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPrincipal.ControllerTelaPrincipal">
    <children>
       <AnchorPane fx:id="ap_Principal" prefHeight="600.0" prefWidth="1024.0" />
-      <MenuBar id="menu" stylesheets="@../style/main.css">
+      <MenuBar id="menu" prefHeight="23.0" prefWidth="203.0" stylesheets="@../style/main.css">
         <menus>
             <Menu mnemonicParsing="false" text="Comprar">
                <items>
                   <MenuItem fx:id="menu_Comprar" mnemonicParsing="false" onAction="#f_GoToCatalogo" text="Ir para catálogo" />
                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cadastrar">
+              <items>
+                <MenuItem fx:id="menu_Cadastrar" mnemonicParsing="false" onAction="#f_GoToCadastro" text="Ir para Cadastro" />
+              </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Sair">
               <items>

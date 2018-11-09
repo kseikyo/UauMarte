@@ -20,8 +20,11 @@ import java.net.URL;
 
 public class ControllerTelaPrincipal extends Application {
     @FXML
-    private MenuItem menu_Comprar;
+    private MenuItem menu_Cadastro;
 
+    @FXML
+    private MenuItem menu_Catalogo;
+    
     private static BorderPane root = new BorderPane();
 
     @FXML
@@ -65,13 +68,14 @@ public class ControllerTelaPrincipal extends Application {
         ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
         controllerTelaLogin.start(ControllerStart.stage);
     }
-    /*
+    
     @FXML
-    public void f_GoToCadastroP() throws Exception{
+    public void f_GoToCadastro() throws Exception{
         TelaCadastro telaCadastro = new TelaCadastro();
-        telaCadastro.start(controllerStart.getStage());
+        telaCadastro.start(ControllerStart.stage);
     }
-    */
+/*    
+*/
 
     @FXML
     public void f_GoToCatalogo() throws IOException{
@@ -92,10 +96,8 @@ public class ControllerTelaPrincipal extends Application {
             ControllerStart.stage.show();
         }
 
-
-
     }
-
+    
     public static BorderPane getRoot() {
         return root;
     }

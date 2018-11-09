@@ -3,23 +3,29 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="768.0" minWidth="1366.0" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPrincipal.ControllerTelaPrincipal">
-   <top>
-      <MenuBar id="menu" stylesheets="@../style/main.css" BorderPane.alignment="CENTER">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: rgb(40,40,40);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaPrincipal.ControllerTelaPrincipal">
+   <children>
+      <AnchorPane fx:id="ap_Principal" prefHeight="600.0" prefWidth="1024.0" />
+      <MenuBar id="menu" prefHeight="23.0" prefWidth="203.0" stylesheets="@../style/main.css">
         <menus>
-          <Menu mnemonicParsing="false" text="CadastrarProdutos">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#f_GoToCadastroP" style="-fx-background-color: rgb(40,40,40);" text="Abrir" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Voltar ao login">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#f_GoToLogin" text="Sair" />
-            </items>
-          </Menu>
+            <Menu mnemonicParsing="false" text="Comprar">
+               <items>
+                  <MenuItem fx:id="menu_Comprar" mnemonicParsing="false" onAction="#f_GoToCatalogo" text="Ir para catálogo" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Cadastrar">
+              <items>
+                <MenuItem fx:id="menu_Cadastrar" mnemonicParsing="false" onAction="#f_GoToCadastro" text="Ir para Cadastro" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sair">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#f_GoToLogin" text="Ir para login" />
+              </items>
+            </Menu>
         </menus>
       </MenuBar>
-   </top>
-</BorderPane>
+   </children>
+</AnchorPane>

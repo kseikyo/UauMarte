@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="768.0" minWidth="1366.0" style="-fx-background-color: rgb(40,40,40);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastroCliente.ControllerTelaCadastroCliente">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: rgb(40,40,40);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCadastroCliente.ControllerTelaCadastroCliente">
    <children>
       <ImageView fx:id="img_ProfilePic" fitHeight="108.0" fitWidth="120.0" layoutX="563.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="39.0" layoutY="75.0" text="Nome Completo" />
@@ -35,8 +35,8 @@
       <Label layoutX="297.0" layoutY="531.0" text="N°" />
       <Label layoutX="396.0" layoutY="531.0" text="UF" />
       <JFXTextField fx:id="tf_CadastroUF" layoutX="429.0" layoutY="520.0" prefHeight="25.0" prefWidth="37.0" styleClass="JFXTextField" />
-      <JFXButton id="bt-cadastro-cliente" fx:id="bt_CadastrarCliente" layoutX="343.0" layoutY="587.0" onAction="#f_CadastrarCliente" text="Cadastrar" />
-      <JFXButton id="bt-login-cliente" fx:id="bt_CancelarCadastro" layoutX="429.0" layoutY="587.0" onAction="#f_GoToLogin" text="Sair" />
+      <JFXButton id="bt-cadastro-cliente" fx:id="bt_CadastrarCliente" layoutX="339.0" layoutY="566.0" onAction="#f_CadastrarCliente" text="Cadastrar" />
+      <JFXButton id="bt-login-cliente" fx:id="bt_CancelarCadastro" layoutX="430.0" layoutY="566.0" onAction="#f_GoToLogin" text="Sair" />
       <Label layoutX="39.0" layoutY="425.0" text="Complemento" />
       <Label fx:id="lb_Email" layoutX="535.0" layoutY="224.0" />
       <Label fx:id="lb_CPF" layoutX="535.0" layoutY="124.0" />

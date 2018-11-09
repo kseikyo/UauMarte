@@ -8,31 +8,41 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="438.0" prefWidth="603.0" style="-fx-background-color: rgb(40,40,40);" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroProdutos.FXML_TelaCadastroController">
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="525.0" prefWidth="670.0" style="-fx-background-color: rgb(13,13,13);" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CadastroProdutos.FXML_TelaCadastroController">
    <children>
-      <ImageView fx:id="iv_imagem" fitHeight="150.0" fitWidth="200.0" layoutX="39.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="71.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232425" height="100.0" layoutX="529.0" layoutY="330.0" stroke="#6f6f6f" strokeType="INSIDE" style="-fx: rgb(15,15,15);" width="100.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="58.0" layoutY="125.0" style="-: gray;" text="Código:" textFill="#979797" />
+      <Label alignment="CENTER_RIGHT" layoutX="53.0" layoutY="173.0" prefHeight="17.0" prefWidth="42.0" text="Nome:" textFill="#979797" />
+      <Label alignment="CENTER_RIGHT" layoutX="306.0" layoutY="173.0" text="R$" textFill="#979797" AnchorPane.leftAnchor="306.0" AnchorPane.topAnchor="173.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="61.0" layoutY="223.0" text="Marca:" textFill="#979797" AnchorPane.leftAnchor="61.0" AnchorPane.topAnchor="223.0" />
+      <TextField id="bt-login-cliente" fx:id="tf_codigo" layoutX="106.0" layoutY="116.0" prefHeight="35.0" prefWidth="439.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="106.0" AnchorPane.topAnchor="116.0" />
+      <TextField id="bt-login-cliente" fx:id="tf_produto" layoutX="109.0" layoutY="164.0" prefHeight="35.0" prefWidth="194.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="109.0" AnchorPane.topAnchor="164.0" />
+      <TextField id="bt-login-cliente" fx:id="tf_preco" layoutX="326.0" layoutY="164.0" prefHeight="35.0" prefWidth="194.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="326.0" AnchorPane.topAnchor="164.0" />
+      <TextField id="bt-login-cliente" fx:id="tf_marca" layoutX="109.0" layoutY="214.0" prefHeight="35.0" prefWidth="149.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="109.0" AnchorPane.topAnchor="214.0" />
+      <ChoiceBox id="bt-login-cliente" fx:id="cb_vendaPor" layoutX="535.0" layoutY="164.0" prefHeight="35.0" prefWidth="82.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="535.0" AnchorPane.topAnchor="164.0" />
+      <Label layoutX="48.0" layoutY="291.0" text="Descrição" textFill="#979797" AnchorPane.bottomAnchor="217.0" AnchorPane.leftAnchor="48.0" />
+      <TextArea fx:id="ta_observacoes" layoutX="48.0" layoutY="311.0" prefHeight="126.0" prefWidth="439.0" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="183.0" />
+      <TextField id="bt-login-cliente" fx:id="tf_pesquisar" layoutX="396.0" layoutY="38.0" stylesheets="@../style/style.css" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="38.0" />
+      <Button id="bt-login-cliente" fx:id="bt_pesquisar" layoutX="555.0" layoutY="38.0" mnemonicParsing="false" onAction="#f_pesquisar" stylesheets="@../style/style.css" text="Pesquisar" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="38.0" />
+      <Button id="bt-login-cliente" fx:id="bt_salvar" layoutX="513.0" layoutY="467.0" mnemonicParsing="false" onAction="#f_salvar" prefHeight="25.0" prefWidth="58.0" stylesheets="@../style/style.css" text="Salvar" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="99.0" />
+      <Button id="bt-login-cliente" fx:id="bt_voltar" layoutX="581.0" layoutY="467.0" mnemonicParsing="false" onAction="#f_voltar" prefHeight="25.0" prefWidth="58.0" stylesheets="@../style/style.css" text="Voltar" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="31.0" />
+      <Button id="bt-login-cliente" fx:id="bt_imagem" layoutX="503.0" layoutY="287.0" mnemonicParsing="false" onAction="#f_escolheImagem" prefHeight="25.0" prefWidth="150.0" stylesheets="@../style/style.css" text="Escolher Imagem" AnchorPane.leftAnchor="503.0" AnchorPane.topAnchor="287.0" />
+      <Button id="bt-login-cliente" fx:id="bt_limpar" layoutX="562.0" layoutY="116.0" mnemonicParsing="false" onAction="#f_limpar" prefHeight="35.0" prefWidth="53.0" stylesheets="@../style/style.css" text="Limpar" AnchorPane.leftAnchor="562.0" AnchorPane.topAnchor="116.0" />
+      <Line endX="524.0" layoutX="125.0" layoutY="277.0" startX="-99.0" />
+      <Line endX="-100.0" endY="158.0" layoutX="596.0" layoutY="293.0" startX="-100.0" />
+      <Line endX="524.0" layoutX="122.0" layoutY="93.0" startX="-99.0" />
+      <ImageView fx:id="iv_logo" fitHeight="72.0" fitWidth="187.0" layoutX="58.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@uaumarte.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv_imagem" fitHeight="100.0" fitWidth="100.0" layoutX="529.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="529.0" AnchorPane.topAnchor="330.0">
          <image>
             <Image url="@../../../ImgImagem001.gif" />
          </image>
       </ImageView>
-      <Label alignment="CENTER_RIGHT" layoutX="202.0" layoutY="94.0" style="-: gray;" text="Código:" textFill="#979797" />
-      <Label alignment="CENTER_RIGHT" layoutX="200.0" layoutY="129.0" text="Produto:" textFill="#979797" />
-      <Label alignment="CENTER_RIGHT" layoutX="212.0" layoutY="166.0" text="Preço:" textFill="#979797" AnchorPane.leftAnchor="212.0" AnchorPane.topAnchor="166.0" />
-      <Label alignment="CENTER_RIGHT" layoutX="211.0" layoutY="204.0" text="Marca:" textFill="#979797" AnchorPane.leftAnchor="211.0" AnchorPane.topAnchor="204.0" />
-      <Label alignment="CENTER_RIGHT" layoutX="352.0" layoutY="166.0" text="Venda por:" textFill="#979797" AnchorPane.leftAnchor="352.0" AnchorPane.topAnchor="166.0" />
-      <TextField id="bt-login-cliente" fx:id="tf_codigo" layoutX="255.0" layoutY="90.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="90.0" />
-      <TextField id="bt-login-cliente" fx:id="tf_produto" layoutX="255.0" layoutY="125.0" prefHeight="25.0" prefWidth="287.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="125.0" />
-      <TextField id="bt-login-cliente" fx:id="tf_preco" layoutX="255.0" layoutY="162.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="162.0" />
-      <TextField id="bt-login-cliente" fx:id="tf_marca" layoutX="255.0" layoutY="200.0" prefHeight="25.0" prefWidth="82.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="200.0" />
-      <ChoiceBox id="bt-login-cliente" fx:id="cb_vendaPor" layoutX="412.0" layoutY="162.0" prefHeight="25.0" prefWidth="130.0" stylesheets="@../style/style.css" AnchorPane.leftAnchor="412.0" AnchorPane.topAnchor="162.0" />
-      <Label layoutX="26.0" layoutY="254.0" text="Observações:" textFill="#979797" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="26.0" />
-      <TextArea fx:id="ta_observacoes" layoutX="26.0" layoutY="271.0" prefHeight="100.0" prefWidth="553.0" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="24.0" />
-      <TextField id="bt-login-cliente" fx:id="tf_pesquisar" layoutX="352.0" layoutY="37.0" stylesheets="@../style/style.css" AnchorPane.rightAnchor="102.0" AnchorPane.topAnchor="37.0" />
-      <Button id="bt-login-cliente" fx:id="bt_pesquisar" layoutX="522.0" layoutY="37.0" mnemonicParsing="false" onAction="#f_pesquisar" stylesheets="@../style/style.css" text="Pesquisar" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="37.0" />
-      <Button id="bt-login-cliente" fx:id="bt_salvar" layoutX="453.0" layoutY="388.0" mnemonicParsing="false" onAction="#f_salvar" prefHeight="25.0" prefWidth="58.0" stylesheets="@../style/style.css" text="Salvar" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="92.0" />
-      <Button id="bt-login-cliente" fx:id="bt_voltar" layoutX="521.0" layoutY="388.0" mnemonicParsing="false" onAction="#f_voltar" prefHeight="25.0" prefWidth="58.0" stylesheets="@../style/style.css" text="Voltar" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="24.0" />
-      <Button id="bt-login-cliente" fx:id="bt_imagem" layoutX="39.0" layoutY="37.0" mnemonicParsing="false" onAction="#f_escolheImagem" prefHeight="25.0" prefWidth="150.0" stylesheets="@../style/style.css" text="Escolher Imagem" AnchorPane.leftAnchor="39.0" AnchorPane.topAnchor="37.0" />
-      <Button id="bt-login-cliente" fx:id="bt_limpar" layoutX="347.0" layoutY="90.0" mnemonicParsing="false" onAction="#f_limpar" stylesheets="@../style/style.css" text="Limpar" AnchorPane.leftAnchor="347.0" AnchorPane.topAnchor="90.0" />
    </children>
 </AnchorPane>

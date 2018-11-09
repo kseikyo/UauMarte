@@ -8,8 +8,8 @@ public class Conexao {
 
     //TEM QUE CRIAR UM BANCO COM O MESMO NOME E SENHA
     private static String usuario = "postgres";
-    private static String senha = "uaumarte";
-    private static String banco = "uaumarte";
+    private static String senha = "";
+    private static String banco = "pessoa";
     private static String host = "localhost:5432";
     private static String driver = "org.postgresql.Driver";
     private static Connection conexao = null;

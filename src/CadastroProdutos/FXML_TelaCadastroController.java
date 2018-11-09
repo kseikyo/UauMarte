@@ -52,6 +52,7 @@ public class FXML_TelaCadastroController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
     private String urlImagem;
     @FXML
     private AnchorPane pane;
@@ -81,6 +82,8 @@ public class FXML_TelaCadastroController implements Initializable {
     private ImageView iv_imagem;
     @FXML
     private ChoiceBox cb_vendaPor;
+    @FXML
+    private ImageView iv_logo;    
     
     @FXML
     //LIMPAR CAMPOS
@@ -201,6 +204,12 @@ public class FXML_TelaCadastroController implements Initializable {
         //SETANDO OS VALORES DE VENDA POR
         cb_vendaPor.getItems().addAll("UN","KG","MG","LT"," M","CM"); 
         cb_vendaPor.setValue("UN");
+        
+        //SETANDO IMAGEM DA LOGO 
+        /*
+        Image imagem = new Image(getClass().getResourceAsStream("/FXMLFILES/uaumarte.png"));
+        iv_logo.setImage(imagem);
+        */
     }
     
     //CHECAR SE TODOS OS CAMPOS OBRIGATORIOS ESTAO PREENCHIDOS, SE NAO, MOSTRAR MENSAGEM DE ERRO
