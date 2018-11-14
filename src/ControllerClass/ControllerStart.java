@@ -8,17 +8,23 @@ package ControllerClass;
 */
 
 
+import TelaPrincipal.ControllerTelaPrincipal;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.net.URL;
 
 
 public class ControllerStart {
     public static Stage stage;
+
+    public AnchorPane ap_Principal;
 
     public ControllerStart() {
 
@@ -59,6 +65,35 @@ public class ControllerStart {
         ControllerStart.stage.show();
     }
 
+
+    public void initMenu(String path) throws IOException{
+        URL menuBarUrl = null;
+        try {
+            menuBarUrl = getClass().getResource("/FXMLFILES/menus.fxml");
+        } catch(NullPointerException e) {
+            e.getMessage();
+            e.printStackTrace();
+        }
+        MenuBar bar = FXMLLoader.load( menuBarUrl );
+
+        URL paneOneUrl = getClass().getResource(path);
+        ap_Principal = FXMLLoader.load( paneOneUrl );
+
+
+        // constructing our scene using the static root
+
+        ControllerTelaPrincipal.getRoot().setTop(bar);
+        ControllerTelaPrincipal.getRoot().setCenter(ap_Principal);
+
+        if(ControllerTelaPrincipal.getRoot().getScene() == null) {
+            Scene scene = new Scene(ControllerTelaPrincipal.getRoot());
+            stage.setScene(scene);
+            stage.show();
+        }else {
+            stage.setScene(ControllerTelaPrincipal.root.getScene());
+            stage.show();
+        }
+    }
 
 
 

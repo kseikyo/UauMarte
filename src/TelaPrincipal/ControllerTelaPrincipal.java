@@ -22,7 +22,7 @@ public class ControllerTelaPrincipal extends Application {
     @FXML
     private MenuItem menu_Comprar;
 
-    private static BorderPane root = new BorderPane();
+    public static BorderPane root = new BorderPane();
 
     @FXML
     private AnchorPane ap_Principal;
@@ -30,10 +30,10 @@ public class ControllerTelaPrincipal extends Application {
 
 
     public void start(Stage stage) throws IOException{
-        URL menuBarUrl = null;
+        /*URL menuBarUrl = null;
         try {
             menuBarUrl = getClass().getResource("/FXMLFILES/menus.fxml");
-        } catch(Exception e) {
+        } catch(NullPointerException e) {
             e.getMessage();
             e.printStackTrace();
         }
@@ -55,9 +55,10 @@ public class ControllerTelaPrincipal extends Application {
             stage.setScene(root.getScene());
             stage.show();
         }
+        */
 
-
-
+        ControllerStart c = new ControllerStart();
+        c.initMenu("/FXMLFILES/TelaCatalogo.fxml");
     }
     
     @FXML

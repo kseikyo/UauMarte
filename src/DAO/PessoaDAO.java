@@ -48,7 +48,7 @@ public class PessoaDAO {
             System.out.println(resultado.getString("senha"));
             ControllerTelaLogin.idusuario = resultado.getInt("idusuario");
 
-            ControllerStart controllerStart = new ControllerStart();
+            //ControllerStart controllerStart = new ControllerStart();
             ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
             controllerTelaPrincipal.start(ControllerStart.stage);
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="211.0" layoutY="24.0" prefHeight="104.0" prefWidth="481.0" text="Finalizando o pedido" textFill="#89ec60">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <Separator layoutX="211.0" layoutY="114.0" maxHeight="2.0" minHeight="0.3" prefHeight="1.0" prefWidth="607.0" />
+      <Label layoutX="211.0" layoutY="128.0" prefHeight="43.0" prefWidth="194.0" text="Endereço de entrega" textFill="#fffbfb">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXRadioButton layoutX="211.0" layoutY="182.0" prefHeight="11.0" prefWidth="190.0" text="PEGAR ENDEREÇO DO BANCO" textFill="#f5f5f5" />
+   </children>
+</AnchorPane>

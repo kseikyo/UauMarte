@@ -148,7 +148,7 @@ public class FXML_TelaCadastroController implements Initializable {
     // VOLTAR A TELA PRINCIPAL
     @FXML 
     private void f_voltar(ActionEvent e) throws IOException{
-        ControllerStart controllerStart = new ControllerStart();
+        //ControllerStart controllerStart = new ControllerStart();
         ControllerTelaPrincipal telaPrincipal = new ControllerTelaPrincipal();
         telaPrincipal.start(ControllerStart.stage);
     }

@@ -6,6 +6,7 @@ import DAO.ProdutoDAO;
 import Objetos.Carrinho;
 import Objetos.Produto;
 import TelaLogin.ControllerTelaLogin;
+import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTimePicker;
@@ -14,13 +15,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -128,6 +133,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @FXML
     private Label lb_finalizar;
 
+
     private LinkedList<Carrinho> carrinho = new LinkedList<>();
     private int pos = 0;
     private int pos2 = 1;
@@ -148,8 +154,8 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        controllerStart.initScreen("/FXMLFILES/TelaCatalogo.fxml", "Uau!Marte",ControllerStart.stage);
-
+        //controllerStart.initScreen("/FXMLFILES/TelaCatalogo.fxml", "Uau!Marte",ControllerStart.stage);
+        controllerStart.initMenu("/FXMLFILES/TelaCatalogo.fxml");
     }
 
     @Override
@@ -279,22 +285,22 @@ public class ControllerTelaCatalogo extends Application implements Initializable
             first = new Image("file:" +list.get(pos).getUrlImagem());
             img_first.setImage(first);
             lb_firsName.setText(list.get(pos).getDescricao());
-            lb_firstPrice.setText(String.valueOf(list.get(pos).getPreco()));
+            lb_firstPrice.setText("R$: "+String.valueOf(list.get(pos).getPreco()));
 
             second = new Image("file:" +list.get(pos2).getUrlImagem());
             img_second.setImage(second);
             lb_secondName.setText(list.get(pos2).getDescricao());
-            lb_secondPrice.setText(String.valueOf(list.get(pos2).getPreco()));
+            lb_secondPrice.setText("R$: "+String.valueOf(list.get(pos2).getPreco()));
 
             third = new Image("file:" +list.get(pos3).getUrlImagem());
             img_third.setImage(third);
             lb_thirdName.setText(list.get(pos3).getDescricao());
-            lb_thirdPrice.setText(String.valueOf(list.get(pos3).getPreco()));
+            lb_thirdPrice.setText("R$: "+String.valueOf(list.get(pos3).getPreco()));
 
             fourth = new Image("file:" +list.get(pos4).getUrlImagem());
             img_fourth.setImage(fourth);
             lb_fourthName.setText(list.get(pos4).getDescricao());
-            lb_fourthPrice.setText(String.valueOf(list.get(pos4).getPreco()));
+            lb_fourthPrice.setText("R$: "+String.valueOf(list.get(pos4).getPreco()));
         }catch(NullPointerException e){
         }
     }
@@ -332,14 +338,16 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     void f_removeThird(ActionEvent event) { removeItem(pos3); }
 
     @FXML
-    void f_FinalizarCompra(ActionEvent event) throws SQLException {
-        System.out.println(tp_hora.getValue());
-        System.out.println(dp_data.getValue());
-        Timestamp t = Timestamp.valueOf(dp_data.getValue().toString() + " " + tp_hora.getValue() + ":"+ tp_hora.getValue().getSecond());
-        System.out.println(t);
-        CompraDAO.CriarCompra(result, t);
+    void f_FinalizarCompra(ActionEvent event) throws SQLException, IOException{
+        //System.out.println(tp_hora.getValue());
+        //System.out.println(dp_data.getValue());
+        // t = Timestamp.valueOf(dp_data.getValue().toString() + " " + tp_hora.getValue() + ":"+ tp_hora.getValue().getSecond());
+        //System.out.println(t);
+        //CompraDAO.CriarCompra(result, t);
         result.clear();
-        lb_finalizar.setText("Compra finalizada com sucesso!");
+        ControllerHorarios controllerHorarios = new ControllerHorarios();
+        controllerHorarios.start(ControllerStart.stage);
+        //lb_finalizar.setText("Compra finalizada com sucesso!");
     }
 
     private void addItem(int pos) {
