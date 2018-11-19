@@ -54,7 +54,7 @@ public class ControllerHorarios extends Application {
 
         ControllerStart c = new ControllerStart();
         //c.initMenu("/FXMLFILES/TelaHorario.fxml");
-        c.initScreen("/FXMLFILES/TelaHorario.fxml", "", ControllerStart.stage);
+        c.initScreen("/FXMLFILES/TelaHorario.fxml", "Finalizando", ControllerStart.stage);
     }
 
     @FXML
