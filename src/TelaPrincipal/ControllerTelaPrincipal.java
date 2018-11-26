@@ -2,6 +2,7 @@ package TelaPrincipal;
 
 import CadastroProdutos.TelaCadastro;
 import ControllerClass.ControllerStart;
+import HistoricoCompras.FXML_TelaHistoricoDeComprasController;
 import TelaCatalogo.ControllerTelaCatalogo;
 import TelaLogin.ControllerTelaLogin;
 import javafx.application.Application;
@@ -95,6 +96,14 @@ public class ControllerTelaPrincipal extends Application {
             ControllerStart.stage.setScene(root.getScene());
             ControllerStart.stage.show();
         }
+    }
+    
+    @FXML
+    public void f_GoToHistorico () throws IOException{
+
+        FXML_TelaHistoricoDeComprasController telaHistorico = new FXML_TelaHistoricoDeComprasController();
+        telaHistorico.start(ControllerStart.stage);
+        
 
     }
     

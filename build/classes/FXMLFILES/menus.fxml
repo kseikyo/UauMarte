@@ -9,6 +9,7 @@
         <Menu mnemonicParsing="false" text="Comprar">
             <items>
                 <MenuItem fx:id="menu_Comprar" mnemonicParsing="false" onAction="#f_GoToCatalogo" text="Ir para catálogo" />
+            <MenuItem mnemonicParsing="false" onAction="#f_GoToHistorico" text="Acessar historico" />
             </items>
         </Menu>
       <Menu mnemonicParsing="false" text="Cadastro">

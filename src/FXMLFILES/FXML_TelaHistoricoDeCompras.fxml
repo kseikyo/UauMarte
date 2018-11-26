@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="485.0" prefWidth="685.0" style="-fx-background-color: rgb(13,13,13);" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HistoricoCompras.FXML_TelaHistoricoDeComprasController">
+   <children>
+      <TableView fx:id="tv_compras" layoutX="25.0" layoutY="60.0" onMouseClicked="#f_setCompra" prefHeight="402.0" prefWidth="177.0" style="-fx-background-color: gray;" stylesheets="@../style/main.css">
+        <columns>
+          <TableColumn fx:id="col_horario" prefWidth="75.0" text="Horario" />
+          <TableColumn fx:id="col_descricao" prefWidth="75.0" text="Descrição" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TableView fx:id="tv_produtos" layoutX="209.0" layoutY="60.0" prefHeight="402.0" prefWidth="452.0" style="-fx-background-color: rgb(25,25,25);" stylesheets="@../style/main.css">
+        <columns>
+          <TableColumn fx:id="col_produto" prefWidth="75.0" text="Produto" />
+          <TableColumn fx:id="col_marca" prefWidth="75.0" text="Marca" />
+            <TableColumn fx:id="col_preco" prefWidth="75.0" text="Preco" />
+            <TableColumn fx:id="col_quantidade" prefWidth="75.0" text="Quantidade" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="25.0" layoutY="33.0" prefHeight="17.0" prefWidth="177.0" stylesheets="@../style/style.css" text="Compras" />
+      <Label layoutX="209.0" layoutY="34.0" prefHeight="15.0" prefWidth="452.0" stylesheets="@../style/style.css" text="Produtos" />
+   </children>
+   <stylesheets>
+      <URL value="@../style/main.css" />
+      <URL value="@../style/style.css" />
+   </stylesheets>
+</AnchorPane>
