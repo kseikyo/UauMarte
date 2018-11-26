@@ -1,71 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDatePicker?>
-<?import com.jfoenix.controls.JFXTimePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: rgb(14,14,14);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerTelaCatalogo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: rgb(14,14,14);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerTelaCatalogo">
    <children>
-      <ImageView fx:id="img_first" fitHeight="100.0" fitWidth="100.0" layoutX="124.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="img_second" fitHeight="100.0" fitWidth="100.0" layoutX="275.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="img_first" fitHeight="100.0" fitWidth="100.0" layoutX="124.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="img_second" fitHeight="100.0" fitWidth="100.0" layoutX="275.0" layoutY="475.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="134.0" fitWidth="113.0" layoutX="68.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@uaumarte.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="img_third" fitHeight="100.0" fitWidth="100.0" layoutX="451.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="img_fourth" fitHeight="100.0" fitWidth="100.0" layoutX="627.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
-      <JFXButton fx:id="bt_leave" ellipsisString="" layoutX="733.0" layoutY="25.0" onAction="#f_goToLogin" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_user" ellipsisString="" layoutX="733.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#f_openUserInfo" ripplerFill="#0e0e0e" styleClass="bt-leave" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_left" ellipsisString="" layoutX="43.0" layoutY="385.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadLeft" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_right" ellipsisString="" layoutX="759.0" layoutY="385.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadRight" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <TableView fx:id="tbv_carrinho" layoutX="820.0" prefHeight="479.0" prefWidth="206.0" style="-fx-background-color: rgb(20,20,20);" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <columns>
-          <TableColumn fx:id="col_nome" prefWidth="75.0" text="Nome" />
-          <TableColumn fx:id="col_preco" prefWidth="64.0" text="Preço" />
-            <TableColumn fx:id="col_quantidade" editable="false" prefWidth="75.0" text="Quantidade" />
-        </columns>
-         <effect>
-            <DropShadow />
-         </effect>
-         <columnResizePolicy>
-            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-         </columnResizePolicy>
-      </TableView>
-      <Label fx:id="lb_firsName" layoutX="149.0" layoutY="484.0" text="123" />
-      <Label fx:id="lb_secondName" layoutX="297.0" layoutY="484.0" text="123" />
-      <Label fx:id="lb_thirdName" layoutX="477.0" layoutY="484.0" text="123" />
-      <Label fx:id="lb_fourthName" layoutX="656.0" layoutY="484.0" text="123" />
-      <Label fx:id="lb_firstPrice" layoutX="159.0" layoutY="515.0" />
-      <Label fx:id="lb_secondPrice" layoutX="324.0" layoutY="515.0" />
-      <Label fx:id="lb_thirdPrice" layoutX="500.0" layoutY="515.0" />
-      <Label fx:id="lb_fourthPrice" layoutX="676.0" layoutY="515.0" />
-      <JFXButton fx:id="bt_addFirst" ellipsisString="" layoutX="169.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_AddFirst" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_addSecond" ellipsisString="" layoutX="339.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_AddSecond" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_addThird" ellipsisString="" layoutX="519.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_AddThird" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_addFourth" ellipsisString="" layoutX="698.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_AddFourth" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="298.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@laptop.png" />
-         </image>
-      </ImageView>
-      <Separator layoutX="-19.0" layoutY="285.0" prefHeight="15.0" prefWidth="833.0" />
-      <JFXButton id="bt-login-cliente" fx:id="bt_finalizar" layoutX="867.0" layoutY="568.0" onAction="#f_FinalizarCompra" stylesheets="@../style/style.css" text="Finalizar compra" />
-      <JFXButton fx:id="bt_removeFirst" ellipsisString="" layoutX="112.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeFirst" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_removeSecond" ellipsisString="" layoutX="282.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeSecond" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_removeThird" ellipsisString="" layoutX="462.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeThird" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXButton fx:id="bt_removeFourth" ellipsisString="" layoutX="641.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeFourth" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXTimePicker fx:id="tp_hora" layoutX="836.0" layoutY="524.0" />
-      <Separator layoutX="817.0" layoutY="480.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="4.0" />
-      <JFXDatePicker fx:id="dp_data" layoutX="836.0" layoutY="485.0" />
-      <Label fx:id="lb_finalizar" layoutX="626.0" layoutY="225.0" />
+      <ImageView fx:id="img_third" fitHeight="100.0" fitWidth="100.0" layoutX="451.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="img_fourth" fitHeight="100.0" fitWidth="100.0" layoutX="627.0" layoutY="493.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="bt_leave" ellipsisString="" layoutX="777.0" layoutY="49.0" onAction="#f_goToLogin" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
+      <JFXButton fx:id="bt_user" ellipsisString="" layoutX="892.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#f_openUserInfo" ripplerFill="#0e0e0e" styleClass="bt-leave" textFill="#0d0d0d" />
+      <JFXButton fx:id="bt_left" ellipsisString="" layoutX="68.0" layoutY="529.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadLeft" ripplerFill="BLACK" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
+      <JFXButton fx:id="bt_right" ellipsisString="" layoutX="777.0" layoutY="548.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadRight" ripplerFill="BLACK" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
    </children>
 </AnchorPane>

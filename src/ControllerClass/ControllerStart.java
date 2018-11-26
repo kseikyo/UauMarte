@@ -8,23 +8,16 @@ package ControllerClass;
 */
 
 
-import TelaPrincipal.ControllerTelaPrincipal;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.MenuBar;
 import javafx.scene.image.Image;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.net.URL;
 
 
 public class ControllerStart {
-    public static Stage stage;
-
-    public AnchorPane ap_Principal;
+    private static Stage stage;
 
     public ControllerStart() {
 
@@ -50,9 +43,9 @@ public class ControllerStart {
         loader.setLocation(getClass().getResource(path));
         Parent root = loader.load();
 
-        stage.getIcons().add(new Image("/FXMLFILES/39257806_1032626896940813_945450888875474944_n (1).jpg"));
+        //zap zap
+        stage.getIcons().add(new Image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX3gawRNp-MGONj-ItirR5vHOUy0KElJbeRmUp45RJPJCtWN2tVA"));
         ControllerStart.stage = stage;
-
         Scene scene = new Scene(root);
         ControllerStart.stage.setTitle(title);
         //ControllerStart.stage.setMaximized(true);
@@ -60,49 +53,18 @@ public class ControllerStart {
         //ControllerStart.stage.setWidth(stage.getMaxWidth());
         ControllerStart.stage.setResizable(false);
 
-        stage.setScene(null);
+
         ControllerStart.stage.setScene(scene);
         ControllerStart.stage.show();
     }
-
-
-    public void initMenu(String path) throws IOException{
-        URL menuBarUrl = null;
-        try {
-            menuBarUrl = getClass().getResource("/FXMLFILES/menus.fxml");
-        } catch(NullPointerException e) {
-            e.getMessage();
-            e.printStackTrace();
-        }
-        MenuBar bar = FXMLLoader.load( menuBarUrl );
-
-        URL paneOneUrl = getClass().getResource(path);
-        ap_Principal = FXMLLoader.load( paneOneUrl );
-
-
-        // constructing our scene using the static root
-
-        ControllerTelaPrincipal.getRoot().setTop(bar);
-        ControllerTelaPrincipal.getRoot().setCenter(ap_Principal);
-
-        if(ControllerTelaPrincipal.getRoot().getScene() == null) {
-            Scene scene = new Scene(ControllerTelaPrincipal.getRoot());
-            stage.setScene(scene);
-            stage.show();
-        }else {
-            stage.setScene(ControllerTelaPrincipal.root.getScene());
-            stage.show();
-        }
-    }
-
 
 
     public void addEmptyValidation () {
 
     }
 
-    /*public Stage getStage() {
+    public Stage getStage() {
         return ControllerStart.stage;
-    }*/
+    }
 
 }

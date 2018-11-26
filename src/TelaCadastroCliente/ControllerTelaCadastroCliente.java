@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
@@ -115,7 +114,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
     private ControllerStart controllerStart = new ControllerStart();
 
     public void start(Stage stage) throws IOException {
-            controllerStart.initScreen("/FXMLFILES/TelaCadastro.fxml","Cadastre-se", ControllerStart.stage);
+            controllerStart.initScreen("/FXMLFILES/TelaCadastro.fxml","Cadastre-se", controllerStart.getStage());
     }
     
     @Override
@@ -455,7 +454,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
             lb_Check.setText("Cadastro realizado com sucesso!");
             TimeUnit.SECONDS.sleep(4);
             ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
-            controllerTelaLogin.start(ControllerStart.stage);
+            controllerTelaLogin.start(this.controllerStart.getStage());
         }else
             lb_Check.setText("Preencha todos os campos obrigatórios");
 
@@ -477,7 +476,7 @@ public class ControllerTelaCadastroCliente extends Application implements Initia
         */
         ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
 
-        controllerTelaLogin.start(ControllerStart.stage);
+        controllerTelaLogin.start(this.controllerStart.getStage());
         
     }
 

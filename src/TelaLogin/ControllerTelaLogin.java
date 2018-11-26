@@ -49,8 +49,6 @@ public class ControllerTelaLogin extends Application implements Initializable {
     @FXML
     private JFXTextField username;
 
-    public static int idusuario;
-
     @FXML
     private JFXPasswordField password;
 
@@ -63,7 +61,7 @@ public class ControllerTelaLogin extends Application implements Initializable {
     @Override
     public void start(Stage stage) {
         try {
-            controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml", "Uau!Marte", ControllerStart.stage);
+            this.controllerStart.initScreen("/FXMLFILES/TelaLogin.fxml", "Uau!Marte", this.controllerStart.getStage());
         } catch(IOException e) { }
     }
     
@@ -75,7 +73,7 @@ public class ControllerTelaLogin extends Application implements Initializable {
         this.LoginPane.getChildren().setAll(pane);
         */
         ControllerTelaCadastroCliente controllerTelaCadastroCliente = new ControllerTelaCadastroCliente();
-        controllerTelaCadastroCliente.start(ControllerStart.stage);
+        controllerTelaCadastroCliente.start(this.controllerStart.getStage());
         
     }
 

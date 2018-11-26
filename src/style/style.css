@@ -7,7 +7,7 @@
 .JFXTextField {
 	-fx-font: 12px "sans-serif";
 	-fx-base: rgb(255,255,255);
-	-fx-text-fill: white;
+	-fx-text-fill: #aba5a5;
 	-fx-opacity: 1.0;
 }
 

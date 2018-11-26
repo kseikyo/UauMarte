@@ -71,7 +71,6 @@ public class FXML_PesquisaProdutosController implements Initializable {
 
     @FXML
     private Button bt_voltar;
-
     
     //PESQUISAR
     @FXML
