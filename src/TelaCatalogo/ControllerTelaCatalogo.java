@@ -359,6 +359,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         // t = Timestamp.valueOf(dp_data.getValue().toString() + " " + tp_hora.getValue() + ":"+ tp_hora.getValue().getSecond());
         //System.out.println(t);
         //CompraDAO.CriarCompra(result, t);
+        if(result.isEmpty()) return;
         result.clear();
         ControllerHorarios controllerHorarios = new ControllerHorarios();
         controllerHorarios.start(ControllerStart.stage);
