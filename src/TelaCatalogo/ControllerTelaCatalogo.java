@@ -35,6 +35,11 @@ import java.sql.Timestamp;
 import java.time.LocalTime;
 import java.util.LinkedList;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class ControllerTelaCatalogo extends Application implements Initializable {
 
@@ -63,6 +68,16 @@ public class ControllerTelaCatalogo extends Application implements Initializable
 
     @FXML
     private JFXButton bt_user;
+    /*
+    @FXML
+    private TableView tbv_Carrinho;
+    @FXML
+    private TableColumn col_nome;
+    @FXML
+    private TableColumn col_preco;
+    @FXML
+    private TableColumn col_quantidade;
+    */
 
     @FXML
     private Label lb_firsName;
@@ -249,7 +264,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         }
 
     }
-
+    
     private void initProdutos() {
         if(once > 0)
             return;
@@ -387,5 +402,4 @@ public class ControllerTelaCatalogo extends Application implements Initializable
             }
         }
     }
-
 }
