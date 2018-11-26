@@ -24,7 +24,7 @@ public class TelaCadastro extends Application {
     }*/
 
     public void start(Stage stage) throws IOException {
-        controllerStart.initScreen("/FXMLFILES/FXML_TelaCadastro.fxml", "UauMarte", controllerStart.getStage());
+        controllerStart.initScreen("/FXMLFILES/FXML_TelaCadastro.fxml", "UauMarte", ControllerStart.stage);
     }
 
     
