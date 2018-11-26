@@ -21,7 +21,7 @@ public class ProdutoDAO {
         String sql = "";
         sql += "SELECT * FROM produto";
 
-        int count = 1;
+        //int count = 1;
 
         LinkedList<Produto> list = new LinkedList<>();
 
@@ -38,8 +38,8 @@ public class ProdutoDAO {
                 p.setPreco(rs.getDouble("preco"));
                 p.setVendaPor(rs.getString("vendapor"));
                 p.setMarca(rs.getString("marca"));
-                p.setUrlImagem("/IMG_produtos/"+count+".JPG");
-                count++;
+                p.setUrlImagem(rs.getString("imagem"));
+                //count++;
                 p.setObservacao(rs.getString("observacao"));
 
                 list.add(p);
@@ -51,10 +51,49 @@ public class ProdutoDAO {
                 e.getCause();
                 e.printStackTrace();
             }
-        for(int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i).getUrlImagem());
-        }
         return list;
     }
+
+    /*public static void cadastrarCompra(String codcompra, String idusuario) {
+        Connection conn = Conexao.getConnection();
+
+        String sql = "";
+        sql += "INSERT INTO public.usuario_do_sistema ";
+        sql += "(NOME, CPF, DATANASC, EMAIL, SENHA, CEP, ENDERECO, NUM_CASA, COMPLEMENTO, BAIRRO, CIDADE, UF)";
+        sql += "VALUES ";
+        sql += "(?,?,?,?,?,?,?,?,?,?,?,?)";
+
+        //CPF SHALL HAVE NUMBERS ONLY
+        String aux = cpf;
+        cpf = aux.substring(0,3);
+        cpf+= aux.substring(4,7);
+        cpf+= aux.substring(8, 11);
+        cpf+= aux.substring(12, 14);
+        System.out.println(cpf);
+
+        try {
+            PreparedStatement comando = conn.prepareStatement(sql);
+            comando.setString(1, nome);
+            comando.setString(2, cpf);
+            comando.setString(3, data);
+            comando.setString(4, login);
+            comando.setString(5, senha);
+            comando.setString(6, cep);
+            comando.setString(7, ender);
+            comando.setString(8, num_casa);
+            comando.setString(9, comp);
+            comando.setString(10, bairro);
+            comando.setString(11, cidade);
+            comando.setString(12, uf);
+            System.out.println(sql);
+            System.out.println(comando);
+            comando.execute();
+            comando.close();
+        } catch (SQLException e) {
+            System.out.println("Erro ao inserir!");
+        }
+        Conexao.fecharConexao();
+    }
+    */
 }
 
