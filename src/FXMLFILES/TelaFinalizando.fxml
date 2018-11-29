@@ -4,14 +4,13 @@
 <?import com.jfoenix.controls.JFXCheckBox?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerFinalizar">
    <children>
-      <JFXCheckBox layoutX="211.0" layoutY="310.0" text="Dinheiro" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_Money" layoutX="211.0" layoutY="310.0" onAction="#f_disableOthers" text="Dinheiro" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
@@ -21,7 +20,6 @@
             <Font size="37.0" />
          </font>
       </Label>
-      <Separator layoutX="211.0" layoutY="114.0" maxHeight="2.0" minHeight="0.3" prefHeight="1.0" prefWidth="607.0" />
       <Label layoutX="211.0" layoutY="128.0" prefHeight="43.0" prefWidth="194.0" text="Endereço de entrega" textFill="#fffbfb">
          <font>
             <Font size="20.0" />
@@ -35,62 +33,62 @@
             <Cursor fx:constant="SW_RESIZE" />
          </cursor>
       </JFXCheckBox>
-      <Separator layoutX="208.0" layoutY="260.0" maxHeight="1.0" minHeight="1.0" prefHeight="1.0" prefWidth="608.0" />
-      <JFXCheckBox layoutX="211.0" layoutY="355.0" text="Visa Débito" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_VisaDeb" layoutX="211.0" layoutY="355.0" onAction="#f_disableOthers" text="Visa Débito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="211.0" layoutY="400.0" text="Mastercard Débito" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_MasterDeb" layoutX="211.0" layoutY="400.0" onAction="#f_disableOthers" text="Mastercard Débito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="211.0" layoutY="445.0" text="Hipercard Débito" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_HiperDeb" layoutX="211.0" layoutY="445.0" onAction="#f_disableOthers" text="Hipercard Débito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="211.0" layoutY="495.0" text="Elo Débito" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_EloDeb" layoutX="211.0" layoutY="495.0" onAction="#f_disableOthers" text="Elo Débito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="626.0" layoutY="308.0" text="Banricompras" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_VisaCred" layoutX="626.0" layoutY="353.0" onAction="#f_disableOthers" text="Visa Crédito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="626.0" layoutY="353.0" text="Visa Crédito" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_MasterCred" layoutX="626.0" layoutY="398.0" onAction="#f_disableOthers" text="Mastercard Crédito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="626.0" layoutY="398.0" text="Mastercard Crédito" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_HiperCred" layoutX="626.0" layoutY="443.0" onAction="#f_disableOthers" text="Hipercard Crédito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="626.0" layoutY="443.0" text="Hipercard Crédito" textFill="WHITE">
+      <JFXCheckBox fx:id="cb_EloCred" layoutX="626.0" layoutY="493.0" onAction="#f_disableOthers" text="Elo Crédito" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXCheckBox>
-      <JFXCheckBox layoutX="626.0" layoutY="493.0" text="Elo Crédito" textFill="WHITE">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXCheckBox>
-      <JFXButton layoutX="743.0" layoutY="543.0" style="-fx-background-color: black; -fx-text-fill: #89ec60;" text="Cancelar">
+      <JFXButton layoutX="743.0" layoutY="543.0" onAction="#f_Cancelar" style="-fx-background-color: black; -fx-text-fill: #89ec60;" text="Cancelar">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="655.0" layoutY="543.0" style="-fx-background-color: #89ec60; -fx-text-fill: black;" text="Finalizar">
+      <JFXButton layoutX="655.0" layoutY="543.0" onAction="#f_Finalizar" style="-fx-background-color: #89ec60; -fx-text-fill: black;" text="Finalizar">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Line endX="471.66668701171875" layoutX="343.0" layoutY="249.0" startX="-135.0" stroke="WHITE" />
+      <Line endX="471.66668701171875" layoutX="343.0" layoutY="259.0" startX="-135.0" stroke="WHITE" />
+      <Line endX="471.66668701171875" layoutX="342.0" layoutY="116.0" startX="-135.0" stroke="WHITE" />
+      <JFXCheckBox fx:id="cb_Banri" layoutX="626.0" layoutY="308.0" onAction="#f_disableOthers" text="Banricompras" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXCheckBox>
    </children>
 </AnchorPane>

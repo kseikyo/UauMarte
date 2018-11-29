@@ -64,7 +64,8 @@ public class ControllerHorarios extends Application {
     }
 
     @FXML
-    private void f_finalizar(ActionEvent event) {
-        System.out.println("foda-se");
+    private void f_finalizar(ActionEvent event) throws IOException{
+        ControllerFinalizar c = new ControllerFinalizar();
+        c.start(ControllerStart.stage);
     }
 }
