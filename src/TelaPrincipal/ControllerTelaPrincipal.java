@@ -64,6 +64,7 @@ public class ControllerTelaPrincipal extends Application {
     @FXML
     public void f_GoToLogin() {
         ControllerTelaLogin controllerTelaLogin = new ControllerTelaLogin();
+        ControllerTelaLogin.idusuario = -1;
         controllerTelaLogin.start(ControllerStart.stage);
     }
     /*
