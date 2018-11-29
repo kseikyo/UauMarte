@@ -24,7 +24,7 @@
          </image>
       </ImageView>
       <JFXTextArea focusColor="BLACK" layoutX="201.0" layoutY="432.0" prefHeight="76.0" prefWidth="607.0" style="-fx-background-color: rgb(14,14,14); -fx-text-fill: white;" unFocusColor="BLACK" />
-      <JFXComboBox focusColor="BLACK" layoutX="201.0" layoutY="380.0" prefHeight="25.0" prefWidth="157.0" promptText="Horários disponíveis" style="-fx-border-color: rgb(14,14,14);" unFocusColor="BLACK" />
+      <JFXComboBox fx:id="comboBox" focusColor="BLACK" layoutX="201.0" layoutY="380.0" prefHeight="25.0" prefWidth="157.0" promptText="Horários disponíveis" style="-fx-border-color: rgb(14,14,14);" unFocusColor="BLACK" />
       <JFXButton fx:id="bt_finalizar" layoutX="641.0" layoutY="530.0" onAction="#f_finalizar" style="-fx-background-color: #89ec60; -fx-text-fill: black;" stylesheets="@../style/style.css" text="Tudo pronto" />
       <JFXButton fx:id="bt_cancelar" layoutX="746.0" layoutY="530.0" onAction="#f_cancelar" style="-fx-text-fill: #89ec60;" text="Cancelar" />
    </children>

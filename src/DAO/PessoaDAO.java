@@ -126,5 +126,38 @@ public class PessoaDAO {
         }
         Conexao.fecharConexao();
     }
+
+    public static String pesquisarEnder() {
+        Connection conn;
+        conn = Conexao.getConnection();
+        String sql = "";
+        sql += "SELECT endereco, num_casa, complemento, bairro, cidade, uf FROM public.usuario_do_sistema";
+        sql += " WHERE idusuario = ";
+        sql += "'" +ControllerTelaLogin.idusuario + "'";
+
+
+        System.out.println(sql);
+        String ender = "";
+
+        try {
+            PreparedStatement comando = conn.prepareStatement(sql);
+            ResultSet resultado = comando.executeQuery();
+            resultado.next();
+            ender+= resultado.getString("endereco");
+            ender+= ", ";
+            ender+= resultado.getString("num_casa") + " ";
+            ender+= resultado.getString("complemento");
+            ender+= ", ";
+            ender+= resultado.getString("bairro");
+            ender+= ", ";
+            ender+= resultado.getString("cidade");
+            ender+= ", ";
+            ender+= resultado.getString("uf");
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Conexao.fecharConexao();
+        return ender;
+    }
     
 }

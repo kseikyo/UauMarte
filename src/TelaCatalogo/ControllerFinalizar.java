@@ -1,6 +1,8 @@
 package TelaCatalogo;
 
 import ControllerClass.ControllerStart;
+import DAO.PessoaDAO;
+import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXCheckBox;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -49,7 +51,8 @@ public class ControllerFinalizar extends Application implements Initializable {
     @FXML
     private JFXCheckBox cb_EloCred;
 
-
+    @FXML
+    private JFXCheckBox endereco;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -60,17 +63,20 @@ public class ControllerFinalizar extends Application implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        endereco.setText(PessoaDAO.pesquisarEnder());
     }
 
     @FXML
-    void f_Cancelar(ActionEvent event) {
-
+    void f_Cancelar(ActionEvent event) throws IOException {
+        ControllerTelaPrincipal c = new ControllerTelaPrincipal();
+        c.start(ControllerStart.stage);
     }
 
     @FXML
     void f_Finalizar(ActionEvent event) {
-
+        System.out.println(f_checkSelected());
+        if(f_checkSelected().equals("false")) return;
+        System.out.println(endereco.getText());
     }
 
     @FXML
@@ -121,5 +127,30 @@ public class ControllerFinalizar extends Application implements Initializable {
         else {
             cb_EloCred.setSelected(true);
         }
+    }
+
+    private String f_checkSelected() {
+        if(cb_Banri.isSelected())
+            return cb_Banri.getText();
+        else if(cb_EloCred.isSelected())
+            return cb_EloCred.getText();
+        else if(cb_EloDeb.isSelected())
+            return cb_EloDeb.getText();
+        else if(cb_HiperCred.isSelected())
+            return cb_HiperCred.getText();
+        else if(cb_HiperDeb.isSelected())
+            return cb_HiperDeb.getText();
+        else if(cb_MasterCred.isSelected())
+            return cb_MasterCred.getText();
+        else if(cb_MasterDeb.isSelected())
+            return cb_MasterDeb.getText();
+        else if(cb_VisaCred.isSelected())
+            return cb_VisaCred.getText();
+        else if(cb_VisaDeb.isSelected())
+            return cb_VisaDeb.getText();
+        else if(cb_Money.isSelected())
+            return cb_Money.getText();
+        else
+            return "false";
     }
 }

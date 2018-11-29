@@ -1,13 +1,18 @@
 package TelaCatalogo;
 
 import ControllerClass.ControllerStart;
+import DAO.EmpresaDAO;
 import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.MenuBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -15,11 +20,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ControllerHorarios extends Application {
+public class ControllerHorarios extends Application implements Initializable {
 
     @FXML
     private AnchorPane ap_Principal;
+
+    @FXML
+    private JFXComboBox<String> comboBox;
+
+    private ComboBox<String> cb;
 
     public ControllerHorarios() {
 
@@ -57,6 +68,11 @@ public class ControllerHorarios extends Application {
         c.initScreen("/FXMLFILES/TelaHorario.fxml", "Finalizando", ControllerStart.stage);
     }
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        comboBox.setItems(FXCollections.observableArrayList(EmpresaDAO.getHorarios("1")));
+    }
+
     @FXML
     private void f_cancelar(ActionEvent event) throws IOException{
         ControllerTelaCatalogo c = new ControllerTelaCatalogo();
@@ -66,6 +82,10 @@ public class ControllerHorarios extends Application {
     @FXML
     private void f_finalizar(ActionEvent event) throws IOException{
         ControllerFinalizar c = new ControllerFinalizar();
+        if(comboBox.getSelectionModel().isEmpty()) {
+            System.out.println("nothing selected");
+            return;
+        }
         c.start(ControllerStart.stage);
     }
 }
