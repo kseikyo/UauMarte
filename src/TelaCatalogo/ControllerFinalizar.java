@@ -12,6 +12,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -78,8 +80,24 @@ public class ControllerFinalizar extends Application implements Initializable {
         //System.out.println(f_checkSelected());
         if(f_checkSelected().equals("false")) return;
         //System.out.println(endereco.getText());
+        try {
         CompraDAO.inserirFinal(f_checkSelected(), endereco.getText());
         System.out.println("Compra finalizada!!!!");
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Compra finalizada!");
+        alert.setHeaderText(null);
+        alert.setContentText("Tudo certo!\nAguarde sua compra.");
+        alert.showAndWait();
+        ControllerTelaPrincipal controllerTelaPrincipal = new ControllerTelaPrincipal();
+        controllerTelaPrincipal.start(ControllerStart.stage);
+        }catch (IOException e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Problema ao pesquisar no banco!");
+            alert.setHeaderText(null);
+            alert.setContentText("Erro ao finalizar a compra!");
+            alert.showAndWait();
+        }
     }
 
     @FXML

@@ -50,7 +50,7 @@ public class CompraDAO {
         String sql = null;
         Carrinho carrinho = null;
 
-        sql = "SELECT max(CodCompra) FROM Compra";
+        sql = "SELECT max(CodCompra) FROM Compra WHERE codcliente = "+ ControllerTelaLogin.idusuario;
 
         PreparedStatement ps = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
         ResultSet rs = ps.executeQuery();
