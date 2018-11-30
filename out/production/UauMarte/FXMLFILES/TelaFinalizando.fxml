@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerFinalizar">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerFinalizar">
    <children>
       <JFXCheckBox fx:id="cb_Money" layoutX="211.0" layoutY="310.0" onAction="#f_disableOthers" text="Dinheiro" textFill="WHITE">
          <font>
@@ -25,7 +25,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXCheckBox alignment="TOP_LEFT" disable="true" layoutX="211.0" layoutY="193.0" prefHeight="21.0" prefWidth="374.0" selected="true" text="Rua Ipiranga, 164 APTO 305, Centro Norte, Dois Vizinhos, PR" textFill="WHITE">
+      <JFXCheckBox fx:id="endereco" alignment="TOP_LEFT" disable="true" layoutX="211.0" layoutY="193.0" prefHeight="21.0" prefWidth="374.0" selected="true" text="Rua Ipiranga, 164 APTO 305, Centro Norte, Dois Vizinhos, PR" textFill="WHITE">
          <font>
             <Font size="13.0" />
          </font>

@@ -1,6 +1,7 @@
 package TelaCatalogo;
 
 import ControllerClass.ControllerStart;
+import DAO.CompraDAO;
 import DAO.PessoaDAO;
 import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXCheckBox;
@@ -74,9 +75,11 @@ public class ControllerFinalizar extends Application implements Initializable {
 
     @FXML
     void f_Finalizar(ActionEvent event) {
-        System.out.println(f_checkSelected());
+        //System.out.println(f_checkSelected());
         if(f_checkSelected().equals("false")) return;
-        System.out.println(endereco.getText());
+        //System.out.println(endereco.getText());
+        CompraDAO.inserirFinal(f_checkSelected(), endereco.getText());
+        System.out.println("Compra finalizada!!!!");
     }
 
     @FXML

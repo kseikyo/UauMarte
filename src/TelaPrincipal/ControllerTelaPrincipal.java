@@ -30,35 +30,8 @@ public class ControllerTelaPrincipal extends Application {
 
 
     public void start(Stage stage) throws IOException{
-        /*URL menuBarUrl = null;
-        try {
-            menuBarUrl = getClass().getResource("/FXMLFILES/menus.fxml");
-        } catch(NullPointerException e) {
-            e.getMessage();
-            e.printStackTrace();
-        }
-        MenuBar bar = FXMLLoader.load( menuBarUrl );
-
-        URL paneOneUrl = getClass().getResource("/FXMLFILES/TelaCatalogo.fxml");
-        ap_Principal = FXMLLoader.load( paneOneUrl );
-
-
-        // constructing our scene using the static root
-
-        getRoot().setTop(bar);
-        getRoot().setCenter(ap_Principal);
-        if(root.getScene() == null) {
-            Scene scene = new Scene(getRoot());
-            stage.setScene(scene);
-            stage.show();
-        }else {
-            stage.setScene(root.getScene());
-            stage.show();
-        }
-        */
-
         ControllerStart c = new ControllerStart();
-        c.initMenu("/FXMLFILES/TelaCatalogo.fxml");
+        c.initScreen("/FXMLFILES/TelaInicial.fxml", "UauMarte", ControllerStart.stage);
     }
     
     @FXML
@@ -76,8 +49,13 @@ public class ControllerTelaPrincipal extends Application {
     */
 
     @FXML
+    public void f_goToCatalogo() throws IOException {
+        ControllerStart c = new ControllerStart();
+        c.initMenu("/FXMLFILES/TelaCatalogo.fxml");
+    }
+
+    @FXML
     public void f_GoToCatalogo() throws IOException{
-        System.out.println("entrou");
 
         URL paneOneUrl = getClass().getResource("/FXMLFILES/TelaCatalogo.fxml");
         ap_Principal = FXMLLoader.load( paneOneUrl );
@@ -90,6 +68,7 @@ public class ControllerTelaPrincipal extends Application {
             ControllerStart.stage.setScene(scene);
             ControllerStart.stage.show();
         }else {
+            root.setCenter(ap_Principal);
             ControllerStart.stage.setScene(root.getScene());
             ControllerStart.stage.show();
         }

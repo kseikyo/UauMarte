@@ -1,6 +1,7 @@
 package TelaCatalogo;
 
 import ControllerClass.ControllerStart;
+import DAO.CompraDAO;
 import DAO.EmpresaDAO;
 import TelaPrincipal.ControllerTelaPrincipal;
 import com.jfoenix.controls.JFXButton;
@@ -20,6 +21,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class ControllerHorarios extends Application implements Initializable {
@@ -80,12 +82,14 @@ public class ControllerHorarios extends Application implements Initializable {
     }
 
     @FXML
-    private void f_finalizar(ActionEvent event) throws IOException{
+    private void f_finalizar(ActionEvent event) throws IOException, SQLException {
         ControllerFinalizar c = new ControllerFinalizar();
+
         if(comboBox.getSelectionModel().isEmpty()) {
             System.out.println("nothing selected");
             return;
         }
+        CompraDAO.inserirHorario(comboBox.getSelectionModel().getSelectedItem());
         c.start(ControllerStart.stage);
     }
 }

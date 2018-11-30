@@ -21,13 +21,13 @@
       <JFXTextField fx:id="tf_CadastroEmail" layoutX="223.0" layoutY="169.0" prefHeight="25.0" prefWidth="310.0" promptText="E-mail" styleClass="JFXTextField" />
       <JFXPasswordField fx:id="pf_CadastroSenha" layoutX="223.0" layoutY="219.0" prefHeight="25.0" prefWidth="147.0" promptText="Senha" styleClass="JFXPasswordField" />
       <JFXPasswordField fx:id="pf_CadastroReSenha" layoutX="387.0" layoutY="219.0" prefHeight="25.0" prefWidth="147.0" promptText="Confirmação de senha" styleClass="JFXPasswordField" />
-      <JFXTextField fx:id="tf_CadastroEndereco" layoutX="223.0" layoutY="384.0" prefHeight="25.0" prefWidth="296.0" promptText="Logradouro" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_Complemento" layoutX="223.0" layoutY="437.0" prefHeight="25.0" prefWidth="153.0" promptText="Complemento" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroBairro" layoutX="398.0" layoutY="437.0" prefHeight="25.0" prefWidth="120.0" promptText="Bairro" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroCidade" layoutX="538.0" layoutY="437.0" prefHeight="25.0" prefWidth="138.0" promptText="Cidade" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroCEP" layoutX="629.0" layoutY="384.0" prefHeight="25.0" prefWidth="120.0" promptText="CEP" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroNumCasa" layoutX="538.0" layoutY="384.0" prefHeight="25.0" prefWidth="67.0" promptText="Nº" styleClass="JFXTextField" />
-      <JFXTextField fx:id="tf_CadastroUF" layoutX="694.0" layoutY="437.0" prefHeight="25.0" prefWidth="55.0" promptText="UF" styleClass="JFXTextField" />
+       <JFXTextField fx:id="tf_CadastroEndereco" layoutX="223.0" layoutY="384.0" prefHeight="25.0" prefWidth="296.0" promptText="Logradouro" styleClass="JFXTextField" />
+       <JFXTextField fx:id="tf_CadastroNumCasa" layoutX="538.0" layoutY="384.0" prefHeight="25.0" prefWidth="67.0" promptText="Nº" styleClass="JFXTextField" />
+       <JFXTextField fx:id="tf_CadastroCEP" layoutX="629.0" layoutY="384.0" prefHeight="25.0" prefWidth="120.0" promptText="CEP" styleClass="JFXTextField" />
+       <JFXTextField fx:id="tf_Complemento" layoutX="223.0" layoutY="437.0" prefHeight="25.0" prefWidth="153.0" promptText="Complemento" styleClass="JFXTextField" />
+       <JFXTextField fx:id="tf_CadastroBairro" layoutX="398.0" layoutY="437.0" prefHeight="25.0" prefWidth="120.0" promptText="Bairro" styleClass="JFXTextField" />
+       <JFXTextField fx:id="tf_CadastroCidade" layoutX="538.0" layoutY="437.0" prefHeight="25.0" prefWidth="138.0" promptText="Cidade" styleClass="JFXTextField" />
+       <JFXTextField fx:id="tf_CadastroUF" layoutX="694.0" layoutY="437.0" prefHeight="25.0" prefWidth="55.0" promptText="UF" styleClass="JFXTextField" />
       <JFXButton fx:id="bt_CadastrarCliente" layoutX="610.0" layoutY="500.0" onAction="#f_CadastrarCliente" style="-fx-background-color: #89ec60; -fx-text-fill: black;" text="Cadastrar" />
       <JFXButton fx:id="bt_CancelarCadastro" layoutX="701.0" layoutY="500.0" onAction="#f_GoToLogin" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: black; -fx-text-fill: #89ec60;" text="Sair" />
       <Label fx:id="lb_Email" layoutX="222.0" layoutY="194.0" />

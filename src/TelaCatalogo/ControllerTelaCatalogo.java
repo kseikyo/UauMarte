@@ -138,6 +138,12 @@ public class ControllerTelaCatalogo extends Application implements Initializable
     @FXML
     private Label lb_finalizar;
 
+    @FXML
+    private Label lb_total;
+
+    @FXML
+    private Label lb_qnt;
+
 
     private LinkedList<Carrinho> carrinho = new LinkedList<>();
     private int pos = 0;
@@ -177,12 +183,12 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         bt_leave.getStyleClass().add("bt-leave");
         bt_leave.setGraphic(new ImageView(leave));
 
-        Image left = new Image(getClass().getResourceAsStream("/FXMLFILES/left.png"));
+        Image left = new Image(getClass().getResourceAsStream("/FXMLFILES/setal.png"));
         bt_left.getStyleClass().removeAll("bt-leave, focus");
         bt_left.getStyleClass().add("bt-leave");
         bt_left.setGraphic(new ImageView(left));
 
-        Image right = new Image(getClass().getResourceAsStream("/FXMLFILES/right.png"));
+        Image right = new Image(getClass().getResourceAsStream("/FXMLFILES/SETA.png"));
         bt_right.getStyleClass().removeAll("bt-leave, focus");
         bt_right.getStyleClass().add("bt-leave");
         bt_right.setGraphic(new ImageView(right));
@@ -222,6 +228,8 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         col_quantidade.setCellValueFactory(new PropertyValueFactory<>("quantidade"));
         this.result = FXCollections.observableArrayList() ;
         tbv_carrinho.setItems(this.result);
+
+
 
     }
 
@@ -348,7 +356,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         //System.out.println(dp_data.getValue());
         // t = Timestamp.valueOf(dp_data.getValue().toString() + " " + tp_hora.getValue() + ":"+ tp_hora.getValue().getSecond());
         //System.out.println(t);
-        //CompraDAO.CriarCompra(result, t);
+        CompraDAO.CriarCompra(result);
         if(result.isEmpty()) return;
         result.clear();
         ControllerHorarios controllerHorarios = new ControllerHorarios();
@@ -366,6 +374,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
                  * this is working ↓↓↓↓↓ */
                 tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))).setQuantidade(carrinho.get(i).getQuantidade()+1);
                 tbv_carrinho.getItems().set(tbv_carrinho.getItems().indexOf(carrinho.get(i)), tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))));
+                atualizarTotal();
                 return;
                 //carrinho.get(i).setQuantidade(carrinho.get(i).getQuantidade()+1);
                 //this one it's worse but it works ↓↓↓↓
@@ -378,6 +387,7 @@ public class ControllerTelaCatalogo extends Application implements Initializable
         c.setPreco(list.get(pos).getPreco());
         c.setQuantidade(1);
         carrinho.add(c);
+        atualizarTotal();
 
         tbv_carrinho.getItems().add(c);
     }
@@ -388,9 +398,22 @@ public class ControllerTelaCatalogo extends Application implements Initializable
                 if(carrinho.get(i).getQuantidade() > 0) {
                     tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))).setQuantidade(carrinho.get(i).getQuantidade() - 1);
                     tbv_carrinho.getItems().set(tbv_carrinho.getItems().indexOf(carrinho.get(i)), tbv_carrinho.getItems().get(tbv_carrinho.getItems().indexOf(carrinho.get(i))));
+                    atualizarTotal();
                     return;
                 }
             }
         }
+
+    }
+
+    private void atualizarTotal() {
+        float total = 0;
+        int qnt = 0;
+        for(int i = 0; i < carrinho.size(); i++) {
+            total+= carrinho.get(i).getPreco() * carrinho.get(i).getQuantidade();
+            qnt++;
+        }
+        lb_total.setText("R$: "+total);
+        lb_qnt.setText(qnt+ " itens");
     }
 }

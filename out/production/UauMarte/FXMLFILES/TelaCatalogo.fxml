@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXDatePicker?>
-<?import com.jfoenix.controls.JFXTimePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: rgb(14,14,14);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerTelaCatalogo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" style="-fx-background-color: rgb(14,14,14);" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TelaCatalogo.ControllerTelaCatalogo">
    <children>
       <ImageView fx:id="img_first" fitHeight="100.0" fitWidth="100.0" layoutX="124.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="img_second" fitHeight="100.0" fitWidth="100.0" layoutX="275.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="134.0" fitWidth="113.0" layoutX="68.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="72.0" fitWidth="153.0" layoutX="31.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@uaumarte.png" />
          </image>
@@ -27,11 +27,11 @@
       <JFXButton fx:id="bt_user" ellipsisString="" layoutX="733.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#f_openUserInfo" ripplerFill="#0e0e0e" styleClass="bt-leave" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_left" ellipsisString="" layoutX="43.0" layoutY="385.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadLeft" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_right" ellipsisString="" layoutX="759.0" layoutY="385.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_LoadRight" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <TableView fx:id="tbv_carrinho" layoutX="820.0" prefHeight="479.0" prefWidth="206.0" style="-fx-background-color: rgb(20,20,20);" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="tbv_carrinho" layoutX="820.0" prefHeight="511.0" prefWidth="204.0" style="-fx-background-color: rgb(20,20,20);" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
-          <TableColumn fx:id="col_nome" prefWidth="75.0" text="Nome" />
-          <TableColumn fx:id="col_preco" prefWidth="64.0" text="Preço" />
-            <TableColumn fx:id="col_quantidade" editable="false" prefWidth="75.0" text="Quantidade" />
+          <TableColumn fx:id="col_nome" prefWidth="75.0" style="-fx-background-color: rgb(20,20,20); -fx-text-fill: white;" text="Nome" />
+          <TableColumn fx:id="col_preco" prefWidth="64.0" style="-fx-text-fill: white; -fx-background-color: rgb(20,20,20);" text="Preço" />
+            <TableColumn fx:id="col_quantidade" editable="false" prefWidth="75.0" style="-fx-background-color: rgb(20,20,20); -fx-text-fill: white;" text="Quantidade" />
         </columns>
          <effect>
             <DropShadow />
@@ -52,20 +52,57 @@
       <JFXButton fx:id="bt_addSecond" ellipsisString="" layoutX="339.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_AddSecond" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_addThird" ellipsisString="" layoutX="519.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_AddThird" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_addFourth" ellipsisString="" layoutX="698.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_AddFourth" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="298.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="139.0" fitWidth="224.0" layoutX="292.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@laptop.png" />
          </image>
       </ImageView>
-      <Separator layoutX="-19.0" layoutY="285.0" prefHeight="15.0" prefWidth="833.0" />
-      <JFXButton id="bt-login-cliente" fx:id="bt_finalizar" layoutX="867.0" layoutY="568.0" onAction="#f_FinalizarCompra" stylesheets="@../style/style.css" text="Finalizar compra" />
       <JFXButton fx:id="bt_removeFirst" ellipsisString="" layoutX="112.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeFirst" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_removeSecond" ellipsisString="" layoutX="282.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeSecond" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_removeThird" ellipsisString="" layoutX="462.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeThird" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
       <JFXButton fx:id="bt_removeFourth" ellipsisString="" layoutX="641.0" layoutY="527.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" onAction="#f_removeFourth" ripplerFill="#0e0e0e" styleClass="bt-leave" stylesheets="@../style/style.css" textFill="#0e0e0e" />
-      <JFXTimePicker fx:id="tp_hora" layoutX="836.0" layoutY="524.0" />
-      <Separator layoutX="817.0" layoutY="480.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="4.0" />
-      <JFXDatePicker fx:id="dp_data" layoutX="836.0" layoutY="485.0" />
       <Label fx:id="lb_finalizar" layoutX="626.0" layoutY="225.0" />
+      <Line endX="67.0" layoutX="169.0" layoutY="479.0" startX="-72.0" stroke="#b6ed6d" />
+      <Line endX="-82.5" endY="-154.0" layoutX="179.0" layoutY="489.0" startX="-82.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="59.0" endY="-153.0" layoutX="179.0" layoutY="489.0" startX="57.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="60.0" endY="-155.0" layoutX="179.0" layoutY="489.0" startX="-83.0" startY="-155.0" stroke="#d6d6d6" />
+      <Line endX="-83.0" endY="50.0" layoutX="179.0" layoutY="489.0" startX="-83.0" startY="-10.0" stroke="#b6ed6d" />
+      <Line endX="57.5" endY="-9.5" layoutX="179.0" layoutY="489.0" startX="57.5" startY="51.20709228515625" stroke="#b6ed6d" />
+      <Line endX="58.0" endY="51.70709228515625" layoutX="179.0" layoutY="489.0" startX="-83.5" startY="50.5" stroke="#b6ed6d" />
+      <Line endX="678.0" layoutX="137.0" layoutY="300.0" startX="-137.0" stroke="WHITE" />
+      <Line endX="239.0" endY="-17.0" layoutX="785.0" layoutY="530.0" startX="34.0" startY="-17.0" stroke="WHITE" strokeWidth="0.1" />
+      <Line endX="529.6666870117188" layoutX="224.0" layoutY="321.0" startX="-129.0" stroke="WHITE" strokeWidth="0.4" />
+      <Line endX="67.0" layoutX="335.0" layoutY="479.0" startX="-72.0" stroke="#b6ed6d" />
+      <Line endX="-82.5" endY="-154.0" layoutX="345.0" layoutY="489.0" startX="-82.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="59.0" endY="-153.0" layoutX="345.0" layoutY="489.0" startX="57.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="60.0" endY="-155.0" layoutX="345.0" layoutY="489.0" startX="-83.0" startY="-155.0" stroke="#d6d6d6" />
+      <Line endX="-83.0" endY="50.0" layoutX="345.0" layoutY="489.0" startX="-83.0" startY="-10.0" stroke="#b6ed6d" />
+      <Line endX="57.5" endY="-9.5" layoutX="345.0" layoutY="489.0" startX="57.5" startY="51.20709228515625" stroke="#b6ed6d" />
+      <Line endX="58.0" endY="51.70709228515625" layoutX="345.0" layoutY="489.0" startX="-83.5" startY="50.5" stroke="#b6ed6d" />
+      <Line endX="67.0" layoutX="510.0" layoutY="479.0" startX="-72.0" stroke="#b6ed6d" />
+      <Line endX="-82.5" endY="-154.0" layoutX="520.0" layoutY="489.0" startX="-82.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="59.0" endY="-153.0" layoutX="520.0" layoutY="489.0" startX="57.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="60.0" endY="-155.0" layoutX="520.0" layoutY="489.0" startX="-83.0" startY="-155.0" stroke="#d6d6d6" />
+      <Line endX="-83.0" endY="50.0" layoutX="520.0" layoutY="489.0" startX="-83.0" startY="-10.0" stroke="#b6ed6d" />
+      <Line endX="57.5" endY="-9.5" layoutX="520.0" layoutY="489.0" startX="57.5" startY="51.20709228515625" stroke="#b6ed6d" />
+      <Line endX="58.0" endY="51.70709228515625" layoutX="520.0" layoutY="489.0" startX="-83.5" startY="50.5" stroke="#b6ed6d" />
+      <Line endX="67.0" layoutX="678.0" layoutY="480.0" startX="-72.0" stroke="#b6ed6d" />
+      <Line endX="-82.5" endY="-154.0" layoutX="688.0" layoutY="490.0" startX="-82.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="59.0" endY="-153.0" layoutX="688.0" layoutY="490.0" startX="57.5" startY="-10.5" stroke="#d6d6d6" />
+      <Line endX="60.0" endY="-155.0" layoutX="688.0" layoutY="490.0" startX="-83.0" startY="-155.0" stroke="#d6d6d6" />
+      <Line endX="-83.0" endY="50.0" layoutX="688.0" layoutY="490.0" startX="-83.0" startY="-10.0" stroke="#b6ed6d" />
+      <Line endX="57.5" endY="-9.5" layoutX="688.0" layoutY="490.0" startX="57.5" startY="51.20709228515625" stroke="#b6ed6d" />
+      <Line endX="58.0" endY="51.70709228515625" layoutX="688.0" layoutY="490.0" startX="-83.5" startY="50.5" stroke="#b6ed6d" />
+      <Pane layoutX="822.0" layoutY="515.0" prefHeight="86.0" prefWidth="200.0" style="-fx-background-color: rgb(20,20,20);">
+         <children>
+            <JFXButton fx:id="bt_finalizar" layoutX="23.0" layoutY="48.0" onAction="#f_FinalizarCompra" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #b6ed6d; -fx-text-fill: black;" stylesheets="@../style/style.css" text="Finalizar compra" />
+            <Label fx:id="lb_total" layoutX="103.0" layoutY="16.0" prefHeight="19.0" prefWidth="68.0" text="R$: 00,00" />
+            <Label fx:id="lb_qnt" layoutX="31.0" layoutY="17.0" text="0 itens">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
